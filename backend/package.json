@@ -14,14 +14,14 @@
   "dependencies": {
     "@nexora/shared": "workspace:*",
     "fastify": "5.2.1",
-    "zod": "3.24.2",
+    "zod": "4.6.5",
     "@nexora/database": "workspace:*",
-    "@fastify/cookie": "11.0.2",
+    "@fastify/cookie": "11.1.2",
     "bcryptjs": "3.0.2",
     "ioredis": "5.4.2",
     "jose": "6.0.8",
-    "@fastify/swagger": "9.8.1",
-    "@fastify/swagger-ui": "5.2.6",
+    "@fastify/swagger": "9.9.1",
+    "@fastify/swagger-ui": "6.1.1",
     "minio": "8.0.5",
     "bullmq": "5.41.9"
   },
