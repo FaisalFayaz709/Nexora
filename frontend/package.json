@@ -13,7 +13,7 @@
   "dependencies": {
     "@nexora/shared": "workspace:*",
     "@tanstack/react-query": "5.66.8",
-    "next": "15.2.4",
+    "next": "15.5.24",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "@hookform/resolvers": "4.1.3",
@@ -30,8 +30,8 @@
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
     "autoprefixer": "10.4.21",
-    "postcss": "8.5.3",
+    "postcss": "8.5.23",
     "tailwindcss": "3.4.17",
-    "vitest": "3.0.8"
+    "vitest": "4.1.11"
   }
 }
