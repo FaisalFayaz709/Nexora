@@ -14,7 +14,7 @@
   "dependencies": {
     "@nexora/shared": "workspace:*",
     "bullmq": "5.41.9",
-    "ioredis": "5.4.2",
+    "ioredis": "6.0.0",
     "zod": "3.24.2"
   },
   "devDependencies": {

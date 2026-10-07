@@ -18,7 +18,7 @@
     "@nexora/database": "workspace:*",
     "@fastify/cookie": "11.0.2",
     "bcryptjs": "3.0.2",
-    "ioredis": "5.4.2",
+    "ioredis": "6.0.0",
     "jose": "6.0.8",
     "@fastify/swagger": "9.8.1",
     "@fastify/swagger-ui": "5.2.6",
