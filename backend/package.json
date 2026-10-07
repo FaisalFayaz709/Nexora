@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@nexora/shared": "workspace:*",
-    "fastify": "5.2.1",
+    "fastify": "5.12.5",
     "zod": "3.24.2",
     "@nexora/database": "workspace:*",
     "@fastify/cookie": "11.0.2",
