@@ -1,0 +1,28 @@
+{
+  "pass": "PASS_21_SECURITY_HARDENING_CERTIFICATION",
+  "status": "SOURCE_LEVEL_RUNTIME_PENDING",
+  "lockedStackUnchanged": true,
+  "businessApiBoundary": "Fastify /api/v1",
+  "frontendBoundary": "Next.js frontend with centralized API/query client only",
+  "controls": [
+    "Strong password hashing, privileged MFA, rate limiting, session revocation and hashed refresh/session secret storage",
+    "RBAC plus tenant, branch, ownership and resource-scope enforcement inside backend services",
+    "Cross-tenant IDOR, privilege escalation, maker-checker and portal isolation abuse cases block production",
+    "CSRF policy, SameSite/HttpOnly/Secure cookies, CSP, HSTS, no-sniff, frame denial and TLS proxy boundary",
+    "Secure upload policy for MIME, extension, size, checksum, private bucket and tenant object-key prefix",
+    "Zod/route validation, bounded pagination, allowlisted filters/sorts and parameterized persistence access",
+    "Audit log redaction for password/token/cookie/OTP/CSRF/API key/secret values",
+    "Dependency security using frozen lockfile, pnpm audit, CodeQL, Semgrep and dependency update monitoring",
+    "Encrypted backup and restore proof covering PostgreSQL, document metadata and object references",
+    "Security release gate remains HOLD until local runtime proof is complete"
+  ],
+  "blockedUntilRuntimeEvidence": [
+    "pnpm-lock.yaml exists",
+    "pnpm install --frozen-lockfile passes",
+    "pnpm security:check passes",
+    "pnpm security:smoke:preflight passes",
+    "runtime API security probes pass",
+    "dependency audit, CodeQL and Semgrep evidence are available",
+    "backup/restore security proof is available"
+  ]
+}

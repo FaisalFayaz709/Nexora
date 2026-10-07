@@ -1,0 +1,220 @@
+{
+  "name": "CRM, Portals, PWA & Advanced Ops",
+  "lockedRouteCount": 36,
+  "lockedRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/leads",
+      "permission": "lead.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/leads/:id",
+      "permission": "lead.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/leads",
+      "permission": "lead.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/leads/:id",
+      "permission": "lead.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/leads/:id/qualify",
+      "permission": "lead.update"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/opportunities",
+      "permission": "opportunity.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/opportunities/:id",
+      "permission": "opportunity.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/opportunities",
+      "permission": "opportunity.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/opportunities/:id",
+      "permission": "opportunity.update"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/site-surveys",
+      "permission": "site_survey.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/site-surveys/:id",
+      "permission": "site_survey.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/site-surveys",
+      "permission": "site_survey.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/site-surveys/:id",
+      "permission": "site_survey.update"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/quotations",
+      "permission": "quotation.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/quotations/:id",
+      "permission": "quotation.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/quotations",
+      "permission": "quotation.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/quotations/:id",
+      "permission": "quotation.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/quotations/:id/send",
+      "permission": "quotation.send"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/quotations/:id/accept",
+      "permission": "quotation.approve"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/contracts",
+      "permission": "contract.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/contracts/:id",
+      "permission": "contract.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/contracts",
+      "permission": "contract.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/contracts/:id",
+      "permission": "contract.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/contracts/:id/activate",
+      "permission": "contract.activate"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/customers/:id/timeline",
+      "permission": "customer.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/documents",
+      "permission": "document.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/documents/:id",
+      "permission": "document.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/documents",
+      "permission": "document.create"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/documents/:id",
+      "permission": "document.delete"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/documents/upload-intent",
+      "permission": "document.create"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/documents/complete-upload",
+      "permission": "document.create"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/documents/:id/download-url",
+      "permission": "document.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/documents/:id/versions",
+      "permission": "document.update"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/notifications",
+      "permission": "Authenticated"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/notifications/:id/read",
+      "permission": "Authenticated"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/notifications/read-all",
+      "permission": "Authenticated"
+    }
+  ],
+  "newPhysicalModelCount": 23,
+  "newPhysicalModels": [
+    "Lead",
+    "Opportunity",
+    "SiteSurvey",
+    "Quotation",
+    "QuotationItem",
+    "CustomerContract",
+    "CustomerContractItem",
+    "Document",
+    "DocumentVersion",
+    "DocumentAccessLog",
+    "Notification",
+    "NotificationPreference",
+    "PortalAccount",
+    "PortalAccessGrant",
+    "PortalActivityLog",
+    "OfflinePwaSyncPolicy",
+    "OfflinePwaSyncBatch",
+    "OfflinePwaSyncItem",
+    "FleetVehicle",
+    "ToolAsset",
+    "SafetyIncident",
+    "QualityInspection",
+    "LocalizationString"
+  ],
+  "reusedPwaPortalRoutes": [
+    "GET /api/v1/asset-qr/:token",
+    "GET /api/v1/customer-sites/:id/assets",
+    "POST /api/v1/work-orders/:id/check-in",
+    "POST /api/v1/work-orders/:id/check-out",
+    "POST /api/v1/work-orders/:id/location"
+  ],
+  "runtimeCertification": "PENDING_ENVIRONMENT"
+}

@@ -1,0 +1,21 @@
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { join } from 'node:path';
+import { spawnSync } from 'node:child_process';
+const root=process.cwd();const failures=[];
+const prior=spawnSync(process.execPath,['scripts/check-core-controls.mjs'],{stdio:'inherit'});if(prior.status!==0)process.exit(prior.status??1);
+const lock=JSON.parse(readFileSync(join(root,'docs/contracts/capability-locks/procurement-core.json'),'utf8'));
+const endpointRows=readFileSync(join(root,'docs/contracts/api-endpoint-matrix.csv'),'utf8');
+const routes=readFileSync(join(root,'backend/src/modules/procurement/procurement.routes.ts'),'utf8');
+for(const r of lock.implementedLockedRoutes){const sig=`defineLockedRoute('${r.method}','${r.path}')`;if(!routes.includes(sig))failures.push(`Missing locked route ${r.method} ${r.path}`);if(!endpointRows.includes(r.path))failures.push(`Route absent from frozen catalog ${r.path}`);if(!routes.includes(`'${r.permission}'`))failures.push(`Permission guard absent ${r.permission}`);}
+const routeMatches=[...routes.matchAll(/defineLockedRoute\('([A-Z]+)','([^']+)'\)/g)].map(m=>`${m[1]} ${m[2]}`);if(new Set(routeMatches).size!==lock.routeCount)failures.push(`Expected ${lock.routeCount} unique procurement routes; got ${new Set(routeMatches).size}`);
+const schema=readFileSync(join(root,'database/prisma/schema.prisma'),'utf8');for(const m of lock.newPhysicalModels)if(!new RegExp(`model\\s+${m}\\s*\\{`).test(schema))failures.push(`Missing Prisma model ${m}`);
+if(/\bFloat\b/.test(schema))failures.push('Float introduced into schema.');
+const migration=readFileSync(join(root,'database/prisma/migrations/20260903000100_pass7_procurement/migration.sql'),'utf8');
+for(const s of ["'DRAFT','SUBMITTED','UNDER_REVIEW','APPROVED','REJECTED','CONVERTED_TO_RFQ','CANCELLED'","'DRAFT','PUBLISHED','OPEN','CLOSED','AWARDED','CANCELLED'","'DRAFT','APPROVAL_PENDING','APPROVED','SENT','PARTIALLY_RECEIVED','RECEIVED','CLOSED','CANCELLED'","'DRAFT','RECEIVED','INSPECTION_PENDING','ACCEPTED','PARTIALLY_ACCEPTED','REJECTED'"])if(!migration.includes(s))failures.push(`Canonical status constraint missing: ${s}`);
+const service=readFileSync(join(root,'backend/src/modules/procurement/procurement.service.ts'),'utf8');
+for(const s of ['MAKER_CHECKER_VIOLATION','assertApproved','purchase_request.submitted','purchase_request.approved','purchase_order.approved','goods_receipt.received','GOODS_RECEIPT_OVER_RECEIPT','receiptTolerancePct','claimIdempotency','IDEMPOTENCY_REPLAY','receiveIntoWarehouse','incrementPoReceived','unitCost:x.item.unitPrice'])if(!service.includes(s))failures.push(`Procurement rule missing: ${s}`);
+if(service.includes('BullMQ')||service.includes("from 'bullmq'"))failures.push('Critical procurement state must not use BullMQ.');
+const repo=readFileSync(join(root,'backend/src/modules/procurement/procurement.repository.ts'),'utf8');if(!repo.includes('FOR UPDATE'))failures.push('PO/PO-item row locking missing.');
+const app=readFileSync(join(root,'backend/src/app.ts'),'utf8');if(!app.includes('createProcurementModule('))failures.push('Procurement module not composed into app.');
+for(const f of ['frontend/src/app/(erp)/procurement/purchase-requests/page.tsx','frontend/src/app/(erp)/procurement/rfqs/page.tsx','frontend/src/app/(erp)/procurement/purchase-orders/page.tsx','frontend/src/app/(erp)/procurement/goods-receipts/page.tsx'])if(!existsSync(join(root,f)))failures.push(`Missing procurement frontend workspace: ${f}`);
+if(failures.length){console.error('Procurement gate FAILED');for(const f of failures)console.error(`- ${f}`);process.exit(1);}console.log(`Procurement gate PASSED: ${lock.routeCount} exact locked Procurement routes and ${lock.newPhysicalModelCount} Procurement models.`);

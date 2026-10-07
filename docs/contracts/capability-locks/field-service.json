@@ -1,0 +1,177 @@
+{
+  "name": "Field Service",
+  "lockedRouteCount": 22,
+  "coreServiceRouteCount": 18,
+  "appendixFTechnicianVisitRouteCount": 3,
+  "lockedRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/tickets",
+      "permission": "ticket.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tickets/:id",
+      "permission": "ticket.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tickets",
+      "permission": "ticket.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/tickets/:id",
+      "permission": "ticket.update"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/work-orders",
+      "permission": "workorder.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/work-orders/:id",
+      "permission": "workorder.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/work-orders",
+      "permission": "workorder.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/work-orders/:id",
+      "permission": "workorder.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tickets/:id/assign",
+      "permission": "ticket.assign"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tickets/:id/resolve",
+      "permission": "ticket.resolve"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tickets/:id/close",
+      "permission": "ticket.close"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/work-orders/:id/assign",
+      "permission": "workorder.assign"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/work-orders/:id/accept",
+      "permission": "workorder.accept"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/work-orders/:id/start-travel",
+      "permission": "workorder.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/work-orders/:id/arrive",
+      "permission": "workorder.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/work-orders/:id/start",
+      "permission": "workorder.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/work-orders/:id/complete",
+      "permission": "workorder.close"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/work-orders/:id/service-report",
+      "permission": "workorder.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/work-orders/:id/check-in",
+      "permission": "TECHNICIAN_ONLY_SCOPE"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/work-orders/:id/location",
+      "permission": "TECHNICIAN_ONLY_SCOPE"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/work-orders/:id/check-out",
+      "permission": "TECHNICIAN_ONLY_SCOPE"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/portal/technician/offline-sync",
+      "permission": "TECHNICIAN_ONLY_SCOPE"
+    }
+  ],
+  "newPhysicalModelCount": 14,
+  "newPhysicalModels": [
+    "Ticket",
+    "TicketComment",
+    "SlaPolicy",
+    "WorkOrder",
+    "WorkOrderAssignment",
+    "TechnicianProfile",
+    "ServiceReport",
+    "ServiceReportPart",
+    "ServiceVisit",
+    "ServiceVisitLocation",
+    "TechnicianLocationPing",
+    "TechnicianRoute",
+    "WorkOrderCheckIn",
+    "WorkOrderCheckOut"
+  ],
+  "coreServiceModelCount": 8,
+  "appendixFGpsVisitModelCount": 6,
+  "canonicalTicketStatuses": [
+    "OPEN",
+    "ASSIGNED",
+    "IN_PROGRESS",
+    "WAITING_CUSTOMER",
+    "WAITING_VENDOR",
+    "RESOLVED",
+    "CLOSED",
+    "CANCELLED"
+  ],
+  "canonicalWorkOrderStatuses": [
+    "NEW",
+    "VALIDATED",
+    "ASSIGNED",
+    "TECHNICIAN_ACCEPTED",
+    "TRAVELLING",
+    "ON_SITE",
+    "DIAGNOSIS",
+    "WORK_IN_PROGRESS",
+    "WAITING_FOR_PART",
+    "RESOLVED",
+    "CUSTOMER_CONFIRMATION",
+    "CLOSED",
+    "CANCELLED"
+  ],
+  "technicianAvailability": [
+    "AVAILABLE",
+    "ASSIGNED",
+    "ON_SITE",
+    "ON_LEAVE",
+    "OFF_DUTY"
+  ],
+  "canonicalEvents": [
+    "ticket.created",
+    "work_order.assigned",
+    "work_order.completed"
+  ],
+  "runtimeCertification": "PENDING_ENVIRONMENT",
+  "appendixGOfflineSyncRouteCount": 1,
+  "appendixGOfflineSyncRoute": "POST /api/v1/portal/technician/offline-sync"
+}

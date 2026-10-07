@@ -1,0 +1,511 @@
+{
+  "organization": {
+    "id": "00000000-0000-7000-8000-000000000101",
+    "code": "NEXORA-DEMO",
+    "name": "NEXORA Demo Organization",
+    "currency": "PKR",
+    "timezone": "Asia/Karachi",
+    "locale": "en-PK",
+    "status": "ACTIVE"
+  },
+  "branches": [
+    {
+      "id": "00000000-0000-7000-8000-000000000102",
+      "code": "LHR-HQ",
+      "name": "Lahore Head Office"
+    }
+  ],
+  "departments": [
+    {
+      "id": "00000000-0000-7000-8000-000000000111",
+      "branchCode": "LHR-HQ",
+      "name": "Management"
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000112",
+      "branchCode": "LHR-HQ",
+      "name": "Finance"
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000113",
+      "branchCode": "LHR-HQ",
+      "name": "Procurement"
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000114",
+      "branchCode": "LHR-HQ",
+      "name": "Projects"
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000115",
+      "branchCode": "LHR-HQ",
+      "name": "Warehouse"
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000116",
+      "branchCode": "LHR-HQ",
+      "name": "Service"
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000117",
+      "branchCode": "LHR-HQ",
+      "name": "HR"
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000118",
+      "branchCode": "LHR-HQ",
+      "name": "IT"
+    }
+  ],
+  "users": [
+    {
+      "id": "00000000-0000-7000-8000-000000000201",
+      "email": "admin@nexora.local",
+      "passwordHash": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "status": "ACTIVE",
+      "branchCode": "LHR-HQ",
+      "roles": [
+        "Super Administrator"
+      ]
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000202",
+      "email": "auditor@nexora.local",
+      "passwordHash": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "status": "ACTIVE",
+      "branchCode": "LHR-HQ",
+      "roles": [
+        "Read Only Auditor"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "00000000-0000-7000-8000-000000000211",
+      "name": "Super Administrator",
+      "systemRole": true,
+      "mfaRequired": true,
+      "permissionSelector": "all"
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000212",
+      "name": "Read Only Auditor",
+      "systemRole": true,
+      "mfaRequired": false,
+      "permissionSelector": "readOnly"
+    }
+  ],
+  "settings": [
+    {
+      "key": "businessNumberFiscalYear",
+      "valueJson": {
+        "month": 1,
+        "day": 1
+      }
+    },
+    {
+      "key": "defaultCurrency",
+      "valueJson": {
+        "currency": "PKR"
+      }
+    },
+    {
+      "key": "defaultTimezone",
+      "valueJson": {
+        "timezone": "Asia/Karachi"
+      }
+    }
+  ],
+  "unitsOfMeasure": [
+    {
+      "id": "00000000-0000-7000-8000-000000000301",
+      "code": "PCS",
+      "name": "Pieces",
+      "precision": 0
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000302",
+      "code": "MTR",
+      "name": "Meters",
+      "precision": 2
+    }
+  ],
+  "productCategories": [
+    {
+      "id": "00000000-0000-7000-8000-000000000311",
+      "name": "CCTV Equipment"
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000312",
+      "name": "Networking"
+    }
+  ],
+  "products": [
+    {
+      "id": "00000000-0000-7000-8000-000000000321",
+      "categoryName": "CCTV Equipment",
+      "sku": "CAM-DEMO-001",
+      "name": "Demo IP Camera",
+      "unitCode": "PCS",
+      "trackingType": "SERIAL",
+      "standardCost": "18500.0000",
+      "salesPrice": "25000.00",
+      "minStock": "10.0000",
+      "maxStock": "100.0000"
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000322",
+      "categoryName": "Networking",
+      "sku": "CAB-CAT6-DEMO",
+      "name": "Demo CAT6 Cable",
+      "unitCode": "MTR",
+      "trackingType": "BATCH",
+      "standardCost": "85.0000",
+      "salesPrice": "125.00",
+      "minStock": "100.0000",
+      "maxStock": "1000.0000"
+    }
+  ],
+  "warehouses": [
+    {
+      "id": "00000000-0000-7000-8000-000000000331",
+      "branchCode": "LHR-HQ",
+      "code": "WH-LHR-01",
+      "name": "Lahore Main Warehouse",
+      "status": "ACTIVE",
+      "locations": [
+        {
+          "id": "00000000-0000-7000-8000-000000000332",
+          "code": "MAIN",
+          "name": "Main Stock Area",
+          "type": "ZONE"
+        }
+      ]
+    }
+  ],
+  "customers": [
+    {
+      "id": "00000000-0000-7000-8000-000000000401",
+      "code": "CUST-DEMO-001",
+      "name": "Demo Customer University",
+      "taxNo": "NTN-DEMO-CUST",
+      "status": "ACTIVE",
+      "creditLimit": "5000000.00"
+    }
+  ],
+  "vendors": [
+    {
+      "id": "00000000-0000-7000-8000-000000000411",
+      "code": "VEND-DEMO-001",
+      "name": "Demo Security Supplier",
+      "taxNo": "NTN-DEMO-VEND",
+      "status": "APPROVED",
+      "riskScore": 20,
+      "riskRating": "LOW",
+      "paymentTerms": "Net 30",
+      "documentsVerifiedAt": "2026-09-01T00:00:00.000Z",
+      "bankVerifiedAt": "2026-09-01T00:00:00.000Z",
+      "approvedCategoryIdsJson": [
+        "SECURITY_EQUIPMENT",
+        "NETWORKING"
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "id": "00000000-0000-7000-8000-000000000501",
+      "code": "1000",
+      "name": "Assets",
+      "type": "ASSET",
+      "active": true
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000502",
+      "code": "1100",
+      "name": "Bank",
+      "type": "ASSET",
+      "active": true
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000503",
+      "code": "1200",
+      "name": "Inventory",
+      "type": "ASSET",
+      "active": true
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000504",
+      "code": "2000",
+      "name": "Liabilities",
+      "type": "LIABILITY",
+      "active": true
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000505",
+      "code": "3000",
+      "name": "Equity",
+      "type": "EQUITY",
+      "active": true
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000506",
+      "code": "4000",
+      "name": "Revenue",
+      "type": "REVENUE",
+      "active": true
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000000507",
+      "code": "5000",
+      "name": "Expenses",
+      "type": "EXPENSE",
+      "active": true
+    }
+  ],
+  "numberSequences": [
+    {
+      "entityType": "PURCHASE_REQUEST",
+      "prefix": "PR",
+      "padding": 5
+    },
+    {
+      "entityType": "RFQ",
+      "prefix": "RFQ",
+      "padding": 5
+    },
+    {
+      "entityType": "SUPPLIER_QUOTATION",
+      "prefix": "SQ",
+      "padding": 5
+    },
+    {
+      "entityType": "PURCHASE_ORDER",
+      "prefix": "PO",
+      "padding": 5
+    },
+    {
+      "entityType": "GOODS_RECEIPT",
+      "prefix": "GRN",
+      "padding": 5
+    },
+    {
+      "entityType": "CUSTOMER_INVOICE",
+      "prefix": "INV",
+      "padding": 5
+    },
+    {
+      "entityType": "SUPPLIER_INVOICE",
+      "prefix": "SIN",
+      "padding": 5
+    },
+    {
+      "entityType": "PAYMENT",
+      "prefix": "PAY",
+      "padding": 5
+    },
+    {
+      "entityType": "PROJECT",
+      "prefix": "PRJ",
+      "padding": 5
+    },
+    {
+      "entityType": "ASSET",
+      "prefix": "AST",
+      "padding": 6
+    },
+    {
+      "entityType": "TICKET",
+      "prefix": "TKT",
+      "padding": 5
+    },
+    {
+      "entityType": "WORK_ORDER",
+      "prefix": "WO",
+      "padding": 5
+    },
+    {
+      "entityType": "STOCK_TRANSFER",
+      "prefix": "TRF",
+      "padding": 5
+    },
+    {
+      "entityType": "JOURNAL_ENTRY",
+      "prefix": "JRN",
+      "padding": 5
+    },
+    {
+      "entityType": "PAYROLL_RUN",
+      "prefix": "PAYR",
+      "padding": 5
+    },
+    {
+      "entityType": "SAAS_INVOICE",
+      "prefix": "SINV",
+      "padding": 5
+    },
+    {
+      "entityType": "PURCHASE_CONTRACT",
+      "prefix": "PCON",
+      "padding": 5
+    },
+    {
+      "entityType": "PURCHASE_RELEASE_ORDER",
+      "prefix": "PRO",
+      "padding": 5
+    },
+    {
+      "entityType": "LANDED_COST",
+      "prefix": "LC",
+      "padding": 5
+    },
+    {
+      "entityType": "PAYMENT_VOUCHER",
+      "prefix": "PV",
+      "padding": 5
+    },
+    {
+      "entityType": "RECEIPT_VOUCHER",
+      "prefix": "RV",
+      "padding": 5
+    }
+  ],
+  "saasPlans": [
+    {
+      "id": "00000000-0000-7000-8000-000000000601",
+      "key": "demo-enterprise",
+      "name": "Demo Enterprise",
+      "moduleKeys": [
+        "identity",
+        "organization",
+        "customers",
+        "vendors",
+        "inventory",
+        "procurement",
+        "projects",
+        "assets",
+        "service",
+        "maintenance",
+        "finance",
+        "reports",
+        "documents",
+        "portals",
+        "notifications",
+        "audit",
+        "integrations"
+      ],
+      "limitsJson": {
+        "users": 50,
+        "storageGb": 10,
+        "branches": 5
+      },
+      "active": true
+    }
+  ],
+  "businessRules": [
+    {
+      "id": "00000000-0000-7000-8000-000000016001",
+      "triggerType": "supplier_invoice.approve",
+      "subjectType": "SupplierInvoice",
+      "name": "Invoice amount greater than PO amount blocks approval",
+      "description": "Fraud/control rule: if supplier invoice amount is above matched PO amount, block approval until corrected or explicitly reviewed.",
+      "severity": "CRITICAL",
+      "conditionJson": {
+        "all": [
+          {
+            "field": "invoiceTotalGreaterThanPoTotal",
+            "operator": "EQ",
+            "value": true
+          }
+        ]
+      },
+      "actionsJson": [
+        {
+          "effect": "BLOCK",
+          "message": "Supplier invoice total exceeds the related purchase order total."
+        }
+      ],
+      "active": true,
+      "createdById": "00000000-0000-7000-8000-000000000201"
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000016002",
+      "triggerType": "payment.create",
+      "subjectType": "Payment",
+      "name": "Same user creates vendor and payment requires secondary approval",
+      "description": "Fraud/control rule: if the same user created a vendor and attempts payment, require secondary approval.",
+      "severity": "HIGH",
+      "conditionJson": {
+        "all": [
+          {
+            "field": "sameUserCreatedVendorAndPayment",
+            "operator": "EQ",
+            "value": true
+          }
+        ]
+      },
+      "actionsJson": [
+        {
+          "effect": "REQUIRE_SECONDARY_APPROVAL",
+          "approvalSubjectType": "Payment",
+          "message": "Payment requires independent secondary approval."
+        }
+      ],
+      "active": true,
+      "createdById": "00000000-0000-7000-8000-000000000201"
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000016003",
+      "triggerType": "inventory.adjustment.post",
+      "subjectType": "StockAdjustment",
+      "name": "Stock adjustment threshold requires warehouse manager approval",
+      "description": "Fraud/control rule: large inventory corrections must not bypass approval thresholds.",
+      "severity": "HIGH",
+      "conditionJson": {
+        "all": [
+          {
+            "field": "adjustmentQuantity",
+            "operator": "GT",
+            "value": 50
+          }
+        ]
+      },
+      "actionsJson": [
+        {
+          "effect": "REQUIRE_APPROVAL",
+          "approvalSubjectType": "StockAdjustment",
+          "approvalDefinitionHint": "Warehouse Manager approval",
+          "message": "Large stock adjustment requires approval."
+        }
+      ],
+      "active": true,
+      "createdById": "00000000-0000-7000-8000-000000000201"
+    },
+    {
+      "id": "00000000-0000-7000-8000-000000016004",
+      "triggerType": "purchase.submit",
+      "subjectType": "PurchaseOrder",
+      "name": "High value purchase route manager finance director",
+      "description": "Amount-based workflow route for high-value purchase approvals.",
+      "severity": "HIGH",
+      "conditionJson": {
+        "all": [
+          {
+            "field": "amount",
+            "operator": "GT",
+            "value": 1000000
+          }
+        ]
+      },
+      "actionsJson": [
+        {
+          "effect": "REQUIRE_APPROVAL",
+          "approvalSubjectType": "PurchaseOrder",
+          "approvalDefinitionHint": "Manager + Finance + Director",
+          "message": "High-value purchase requires multi-step approval."
+        }
+      ],
+      "active": true,
+      "createdById": "00000000-0000-7000-8000-000000000201"
+    }
+  ]
+}

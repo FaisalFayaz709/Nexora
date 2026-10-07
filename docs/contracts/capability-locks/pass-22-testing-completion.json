@@ -1,0 +1,45 @@
+{
+  "pass": "PASS_22_TESTING_COMPLETION",
+  "status": "PASS_SOURCE_LEVEL_OVERALL_HOLD_PREVIOUS_RUNTIME",
+  "lockedStackPreserved": true,
+  "sourceOnlyIsNotRuntimeCertification": true,
+  "testLayers": [
+    "UNIT_BUSINESS_RULES",
+    "REPOSITORY_POSTGRES_INTEGRATION",
+    "FASTIFY_API_INTEGRATION",
+    "CROSS_MODULE_WORKFLOW_INTEGRATION",
+    "FRONTEND_COMPONENT_AND_HOOKS",
+    "BROWSER_E2E_FULL_STACK",
+    "SECURITY_ABUSE_AUTHORIZATION",
+    "MIGRATION_SCHEMA_EVOLUTION",
+    "PERFORMANCE_CRITICAL_PATHS",
+    "BACKUP_RESTORE_OPERATIONAL_RECOVERY"
+  ],
+  "criticalScenarios": [
+    "PASS22-LOGIN-CORE-PLATFORM",
+    "PASS22-CUSTOMER-PROJECT-BOM-MATERIAL-REQUEST",
+    "PASS22-PROCUREMENT-PR-RFQ-PO-GRN-STOCK",
+    "PASS22-ASSET-INSTALLATION-QR-MAINTENANCE",
+    "PASS22-TICKET-WORKORDER-SERVICE-PARTS-CLOSE",
+    "PASS22-FINANCE-INVOICE-POST-PAYMENT-AGING",
+    "PASS22-SUPPLIER-INVOICE-THREE-WAY-MATCH",
+    "PASS22-DOCUMENT-MINIO-REPORT-WORKER",
+    "PASS22-PORTAL-SCOPES-OFFLINE-SYNC",
+    "PASS22-SECURITY-CROSS-TENANT-MAKER-CHECKER",
+    "PASS22-FULL-LIFECYCLE-DASHBOARD-PROFITABILITY"
+  ],
+  "runtimeEvidenceRequired": [
+    "pnpm-lock.yaml",
+    "pnpm install --frozen-lockfile",
+    "pnpm typecheck",
+    "pnpm lint",
+    "pnpm test",
+    "RUN_INTEGRATION_TESTS=1 pnpm test",
+    "RUN_BROWSER_E2E=1 pnpm test:e2e:browser",
+    "SECURITY_SMOKE=1 pnpm security:smoke:certify",
+    "pnpm db:migrate:deploy",
+    "pnpm db:seed",
+    "docker compose up --build",
+    "backup/restore certification"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "initialMigration": "database/prisma/migrations/20260901000100_pass3_database_foundation/migration.sql",
+  "initialMigrationSha256": "9117fe93fdb35d8a038c663c4e8d23c0037656d2e4da6365fd1304a7b6922cae",
+  "requiredModels": [
+    "User",
+    "Session",
+    "MfaCredential",
+    "Permission",
+    "Role",
+    "RolePermission",
+    "OrganizationMembership",
+    "UserRole",
+    "Organization",
+    "Branch",
+    "Department",
+    "Team",
+    "Address",
+    "OrganizationSetting",
+    "AuditLog",
+    "BusinessEvent",
+    "IdempotencyKey"
+  ],
+  "tenantOwnedModels": [
+    "Role",
+    "OrganizationMembership",
+    "Branch",
+    "Department",
+    "Team",
+    "Address",
+    "OrganizationSetting",
+    "AuditLog",
+    "BusinessEvent",
+    "IdempotencyKey"
+  ],
+  "canonicalPermissionSeedCount": 172
+}

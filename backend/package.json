@@ -1,0 +1,33 @@
+{
+  "name": "@nexora/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@nexora/shared": "workspace:*",
+    "fastify": "5.2.1",
+    "zod": "3.24.2",
+    "@nexora/database": "workspace:*",
+    "@fastify/cookie": "11.0.2",
+    "bcryptjs": "3.0.2",
+    "ioredis": "5.4.2",
+    "jose": "6.0.8",
+    "@fastify/swagger": "9.8.1",
+    "@fastify/swagger-ui": "5.2.6",
+    "minio": "8.0.5",
+    "bullmq": "5.41.9"
+  },
+  "devDependencies": {
+    "tsx": "4.19.3",
+    "vitest": "3.0.8",
+    "@types/node": "22.13.10"
+  }
+}

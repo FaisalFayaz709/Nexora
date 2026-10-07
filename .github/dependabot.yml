@@ -1,0 +1,38 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      pnpm-workspace-runtime:
+        patterns:
+          - '@fastify/*'
+          - '@prisma/*'
+          - 'prisma'
+          - '@tanstack/*'
+          - 'zod'
+          - 'react-hook-form'
+          - '@hookform/*'
+      tooling:
+        patterns:
+          - 'typescript'
+          - 'eslint*'
+          - 'prettier'
+          - 'vitest'
+          - '@playwright/*'
+    commit-message:
+      prefix: deps
+      include: scope
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      github-actions:
+        patterns:
+          - '*'
+    commit-message:
+      prefix: ci
+      include: scope

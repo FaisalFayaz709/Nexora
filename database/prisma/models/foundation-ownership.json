@@ -1,0 +1,31 @@
+{
+  "identity_access": [
+    "User",
+    "Session",
+    "MfaCredential",
+    "Permission",
+    "Role",
+    "RolePermission",
+    "OrganizationMembership",
+    "UserRole"
+  ],
+  "organization": [
+    "Organization",
+    "Branch",
+    "Department",
+    "Team",
+    "Address",
+    "OrganizationSetting"
+  ],
+  "platform_foundation": [
+    "AuditLog",
+    "BusinessEvent",
+    "IdempotencyKey"
+  ],
+  "deferred": {
+    "Department.managerEmployeeId FK": "Added when Employee physical model is introduced.",
+    "Team M:N Employee": "Added when Employee physical model is introduced.",
+    "NumberSequence": "Remains a locked commercial-completeness requirement for its dedicated implementation capability.",
+    "Feature/module/SaaS tables": "Remain locked requirements for their dedicated platform/commercial capabilities."
+  }
+}

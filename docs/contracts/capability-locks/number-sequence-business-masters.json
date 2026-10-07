@@ -1,0 +1,149 @@
+{
+  "implementedRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/number-sequences"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/number-sequences"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/number-sequences/:id/reset"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/employees"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/employees/:id"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/employees"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/employees/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/customers/:id"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/customers"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/customers/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/customer-sites"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/customer-sites/:id"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/customer-sites"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/customer-sites/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vendors"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vendors/:id"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/vendors"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/vendors/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/vendors/:id/performance"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products/:id"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/products"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/products/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/warehouses"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/warehouses/:id"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/warehouses"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/warehouses/:id"
+    }
+  ],
+  "routeCount": 28,
+  "newPhysicalModels": [
+    "Skill",
+    "Employee",
+    "EmployeeSkill",
+    "EmployeeCertification",
+    "EmployeeTeam",
+    "Customer",
+    "CustomerContact",
+    "CustomerSite",
+    "SiteBuilding",
+    "SiteArea",
+    "Vendor",
+    "VendorContact",
+    "VendorPerformance",
+    "ProductCategory",
+    "UnitOfMeasure",
+    "Product",
+    "VendorProduct",
+    "Warehouse",
+    "WarehouseLocation",
+    "ImportTemplate",
+    "NumberSequence",
+    "NumberSequenceReservation"
+  ],
+  "newPhysicalModelCount": 22,
+  "importTemplateSubjects": [
+    "EMPLOYEE",
+    "CUSTOMER",
+    "VENDOR",
+    "PRODUCT",
+    "WAREHOUSE"
+  ]
+}

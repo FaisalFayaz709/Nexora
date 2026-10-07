@@ -1,0 +1,99 @@
+{
+  "name": "Route Coverage & Production Readiness",
+  "scope": "Frozen API catalog closure plus durable production-readiness controls.",
+  "newBusinessModels": 0,
+  "frozenCatalogRouteCount": 364,
+  "runtimeCertificationRequiredBeforeProduction": true,
+  "coverageCriticalRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/vendors/:id/purchase-orders",
+      "permission": "purchase_order.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/vendors/:id/blacklist",
+      "permission": "vendor.risk.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/portal/technician/offline-sync",
+      "permission": "authenticated technician portal scope"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/projects/:id/budget",
+      "permission": "project.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/projects/:id/budget/:budgetId/approve",
+      "permission": "project.approve"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/report-templates"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/report-templates/:id"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/report-templates/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/saved-reports"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/saved-reports/:id"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/saved-reports/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/scheduled-reports"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/scheduled-reports/:id"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/scheduled-reports/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/report-executions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboards/widgets"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/dashboards/widgets"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/saved-views"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/saved-views/:id"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/saved-views"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/saved-views/:id"
+    }
+  ],
+  "updatedByPass": "PASS_20_PORTALS_AND_SAAS_READINESS"
+}

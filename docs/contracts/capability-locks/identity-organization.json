@@ -1,0 +1,138 @@
+{
+  "implementedLockedRoutes": [
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/mfa/verify"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/refresh"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/logout"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/logout-all"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/sessions"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/auth/sessions/:sessionId"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/branches"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/branches/:id"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/branches"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/branches/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/departments"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/departments/:id"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/departments"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/departments/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/users"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/users/:id"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/users"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/users/:id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/roles"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/roles"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/roles/:id"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/roles/:id/permissions"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/users/roles"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/permissions"
+    }
+  ],
+  "implementedLockedRouteCount": 26,
+  "requiredPermissions": [
+    "branch.view",
+    "branch.create",
+    "branch.update",
+    "department.view",
+    "department.create",
+    "department.update",
+    "identity.user.view",
+    "identity.user.manage",
+    "identity.role.manage"
+  ],
+  "sourceRequiredControls": [
+    "password bcrypt or argon2",
+    "revocable server-side sessions with hashed refresh secret",
+    "TOTP MFA for privileged roles",
+    "recovery codes hashed",
+    "short-lived access token without authoritative permissions",
+    "role -> permissions; membership -> roles",
+    "permission + tenant/branch/resource scope",
+    "maker-checker baseline",
+    "organizationId resolved from authenticated membership",
+    "role/permission/session changes audited",
+    "auth endpoint rate limiting",
+    "tenant user administration endpoints are protected by identity.user.* permissions",
+    "role administration endpoints are protected by identity.role.manage",
+    "permission catalog is served from seeded Permission table and shared constants",
+    "tenant user create/status and role changes are transactional and audited"
+  ],
+  "derivedSupportingEntity": "MfaRecoveryCode"
+}

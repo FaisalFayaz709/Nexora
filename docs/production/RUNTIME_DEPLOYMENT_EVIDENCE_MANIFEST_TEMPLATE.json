@@ -1,0 +1,42 @@
+{
+  "pass": "PASS_23",
+  "gate": "PASS_23_RUNTIME_DEPLOYMENT_CERTIFICATION",
+  "generatedAt": "REPLACE_WITH_UTC_ISO_TIMESTAMP",
+  "sourceArchiveSha256": "REPLACE_WITH_ARCHIVE_SHA256",
+  "composeProjectName": "nexora_pass23_cert",
+  "httpGatewayPort": "8080",
+  "apiBaseUrl": "http://127.0.0.1:8080/api/v1",
+  "evidenceDirectory": "certification-output/pass-23-runtime-deployment",
+  "requiredEvidence": [
+    "pass-23-runtime-deployment-certification.log",
+    "docker-compose.config.yml",
+    "docker-compose-ps.txt",
+    "nginx-healthz.txt",
+    "api-live.json",
+    "api-ready.json",
+    "web-home.html",
+    "minio-upload-download-proof.txt",
+    "docker-compose-logs.tail.txt"
+  ],
+  "runtimeChecks": {
+    "frozenInstallPassed": false,
+    "staticVerificationPassed": false,
+    "lintPassed": false,
+    "typecheckPassed": false,
+    "testsPassed": false,
+    "buildPassed": false,
+    "prismaMigrationDeployPassed": false,
+    "seedPassed": false,
+    "dockerComposeConfigPassed": false,
+    "dockerComposeBuildPassed": false,
+    "runtimeServicesHealthy": false,
+    "nginxHealthzPassed": false,
+    "apiLivePassed": false,
+    "apiReadyPassed": false,
+    "webHomePassed": false,
+    "minioProofPassed": false,
+    "fullWorkflowE2ePassed": false,
+    "securitySmokePassed": false
+  },
+  "runtimeStatus": "HOLD_RUNTIME_EVIDENCE_REQUIRED"
+}

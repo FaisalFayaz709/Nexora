@@ -1,0 +1,122 @@
+{
+  "name": "Approval Engine",
+  "implementedLockedRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/approvals/inbox",
+      "permission": "approval.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/approvals/:id",
+      "permission": "approval.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/approvals/:id/approve",
+      "permission": "approval.act"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/approvals/:id/reject",
+      "permission": "approval.act"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/approvals/:id/return",
+      "permission": "approval.act"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/approval-definitions",
+      "permission": "workflow.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/approval-definitions",
+      "permission": "workflow.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/workflow-rules",
+      "permission": "workflow.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/workflow-rules/:id",
+      "permission": "workflow.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/workflow-rules",
+      "permission": "workflow.manage"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/workflow-rules/:id",
+      "permission": "workflow.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/workflow-rules/:id/activate",
+      "permission": "workflow.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/workflow-rules/:id/deactivate",
+      "permission": "workflow.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/workflow-rules/evaluate",
+      "permission": "workflow.manage"
+    }
+  ],
+  "routeCount": 14,
+  "newPhysicalModels": [
+    "ApprovalDefinition",
+    "ApprovalStepDefinition",
+    "ApprovalRequest",
+    "ApprovalStep",
+    "ApprovalAction",
+    "BusinessRule"
+  ],
+  "newPhysicalModelCount": 6,
+  "canonicalApprovalRequestStatuses": [
+    "PENDING",
+    "IN_PROGRESS",
+    "APPROVED",
+    "REJECTED",
+    "RETURNED",
+    "CANCELLED"
+  ],
+  "integratedSubjects": [
+    "PurchaseRequest",
+    "PurchaseOrder",
+    "StockAdjustment",
+    "StockCountVariance",
+    "VendorOnboardingRequest",
+    "CustomerInvoice",
+    "SupplierInvoice",
+    "Expense",
+    "Payment",
+    "LeaveRequest",
+    "PayrollRun",
+    "AssetRetirement",
+    "AssetDisposal",
+    "PurchaseContract",
+    "PurchaseReleaseOrder",
+    "LandedCost",
+    "BankReconciliation",
+    "PaymentVoucher",
+    "ReceiptVoucher"
+  ],
+  "runtimeCertification": "PENDING_ENVIRONMENT_PASS_16_WORKFLOW_CONTROL_RUNTIME_PROOF",
+  "pass16ControlRules": [
+    "invoice_amount_greater_than_po_amount_blocks_supplier_invoice_approval",
+    "same_user_creates_vendor_and_payment_requires_secondary_approval",
+    "stock_adjustment_above_threshold_requires_warehouse_manager_approval",
+    "high_value_purchase_requires_manager_finance_and_director_route",
+    "creator_cannot_be_sole_approver_for_high_risk_subject"
+  ]
+}

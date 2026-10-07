@@ -1,0 +1,3 @@
+import { describe, expect, it } from 'vitest';
+import { CreateLeadSchema, CreateQuotationSchema, QualifyLeadSchema } from '@nexora/shared';
+describe('CRM contracts',()=>{it('validates lead creation',()=>{expect(CreateLeadSchema.parse({companyName:'Acme',contactName:'Ali',email:'a@example.com'}).companyName).toBe('Acme');});it('validates lead qualification',()=>{expect(QualifyLeadSchema.parse({opportunityName:'AMC Deal'}).opportunityName).toBe('AMC Deal');});it('validates quotation with items',()=>{const q=CreateQuotationSchema.parse({customerId:'11111111-1111-4111-8111-111111111111',validUntil:'2026-12-31',items:[{description:'CCTV',unitPrice:'1000.00'}]});expect(q.items).toHaveLength(1);});});

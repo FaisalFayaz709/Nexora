@@ -1,0 +1,118 @@
+{
+  "PurchaseRequest": [
+    "DRAFT",
+    "SUBMITTED",
+    "UNDER_REVIEW",
+    "APPROVED",
+    "REJECTED",
+    "CONVERTED_TO_RFQ",
+    "CANCELLED"
+  ],
+  "RFQ": [
+    "DRAFT",
+    "PUBLISHED",
+    "OPEN",
+    "CLOSED",
+    "AWARDED",
+    "CANCELLED"
+  ],
+  "PurchaseOrder": [
+    "DRAFT",
+    "APPROVAL_PENDING",
+    "APPROVED",
+    "SENT",
+    "PARTIALLY_RECEIVED",
+    "RECEIVED",
+    "CLOSED",
+    "CANCELLED"
+  ],
+  "GoodsReceipt": [
+    "DRAFT",
+    "RECEIVED",
+    "INSPECTION_PENDING",
+    "ACCEPTED",
+    "PARTIALLY_ACCEPTED",
+    "REJECTED"
+  ],
+  "Project": [
+    "DRAFT",
+    "PLANNED",
+    "ACTIVE",
+    "ON_HOLD",
+    "COMPLETED",
+    "HANDED_OVER",
+    "CANCELLED"
+  ],
+  "Asset": [
+    "PROCURED",
+    "IN_WAREHOUSE",
+    "ALLOCATED",
+    "ISSUED",
+    "INSTALLED",
+    "ACTIVE",
+    "UNDER_MAINTENANCE",
+    "REPAIRED",
+    "REPLACED",
+    "RETIRED"
+  ],
+  "Ticket": [
+    "OPEN",
+    "ASSIGNED",
+    "IN_PROGRESS",
+    "WAITING_CUSTOMER",
+    "WAITING_VENDOR",
+    "RESOLVED",
+    "CLOSED",
+    "CANCELLED"
+  ],
+  "WorkOrder": [
+    "NEW",
+    "VALIDATED",
+    "ASSIGNED",
+    "TECHNICIAN_ACCEPTED",
+    "TRAVELLING",
+    "ON_SITE",
+    "DIAGNOSIS",
+    "WORK_IN_PROGRESS",
+    "WAITING_FOR_PART",
+    "RESOLVED",
+    "CUSTOMER_CONFIRMATION",
+    "CLOSED",
+    "CANCELLED"
+  ],
+  "Invoice": [
+    "DRAFT",
+    "APPROVAL_PENDING",
+    "APPROVED",
+    "POSTED",
+    "SENT",
+    "PARTIALLY_PAID",
+    "PAID",
+    "OVERDUE",
+    "CANCELLED",
+    "REVERSED"
+  ],
+  "ApprovalRequest": [
+    "PENDING",
+    "IN_PROGRESS",
+    "APPROVED",
+    "REJECTED",
+    "RETURNED",
+    "CANCELLED"
+  ],
+  "Contract": [
+    "DRAFT",
+    "UNDER_REVIEW",
+    "ACTIVE",
+    "EXPIRING",
+    "EXPIRED",
+    "TERMINATED"
+  ],
+  "LeaveRequest": [
+    "DRAFT",
+    "SUBMITTED",
+    "APPROVED",
+    "REJECTED",
+    "CANCELLED"
+  ]
+}

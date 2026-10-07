@@ -1,0 +1,12 @@
+$ErrorActionPreference = "Stop"
+Write-Host "PASS 21 — Security Hardening Certification"
+node scripts/check-pass-21-security-hardening-certification.mjs --source-only
+Write-Host ""
+Write-Host "Strict local runtime commands required before GO:"
+Write-Host "pnpm install --frozen-lockfile"
+Write-Host "pnpm security:check"
+Write-Host "pnpm security:smoke:preflight"
+Write-Host "pnpm typecheck"
+Write-Host "pnpm test"
+Write-Host "pnpm build"
+Write-Host "SECURITY_SMOKE=1 node scripts/security-smoke-certify.mjs"

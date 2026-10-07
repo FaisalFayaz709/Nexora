@@ -1,0 +1,64 @@
+{
+  "pass": "PASS_20_PORTALS_AND_SAAS_READINESS",
+  "status": "SOURCE_LEVEL_RUNTIME_PENDING",
+  "customerPortal": [
+    "dashboard",
+    "projects",
+    "contracts",
+    "sites",
+    "assets",
+    "tickets",
+    "invoices",
+    "payments",
+    "documents",
+    "create ticket",
+    "confirm work order"
+  ],
+  "vendorPortal": [
+    "dashboard",
+    "rfqs",
+    "quotations",
+    "submit quotation",
+    "purchase orders",
+    "acknowledge PO",
+    "deliveries",
+    "invoices",
+    "submit invoice",
+    "payments",
+    "performance",
+    "documents"
+  ],
+  "technicianPwa": [
+    "dashboard",
+    "jobs",
+    "work-order detail",
+    "accept",
+    "start travel",
+    "arrive",
+    "check-in",
+    "location",
+    "start",
+    "service report",
+    "check-out",
+    "complete",
+    "offline queue",
+    "offline sync"
+  ],
+  "saasReadiness": [
+    "plans",
+    "subscriptions",
+    "usage metrics",
+    "storage usage",
+    "tenant invoices",
+    "plan module limits",
+    "audit events"
+  ],
+  "lockedArchitecture": [
+    "Fastify /api/v1 business API",
+    "PortalShell",
+    "TechnicianPwaShell",
+    "No Next.js business API",
+    "Server-side tenant linked-scope enforcement",
+    "Audit trail for portal/SaaS mutations"
+  ]
+}

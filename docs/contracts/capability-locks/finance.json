@@ -1,0 +1,166 @@
+{
+  "name": "Finance",
+  "lockedRouteCount": 26,
+  "lockedRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/customer-invoices",
+      "permission": "invoice.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/customer-invoices/:id",
+      "permission": "invoice.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/customer-invoices",
+      "permission": "invoice.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/customer-invoices/:id",
+      "permission": "invoice.update"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/supplier-invoices",
+      "permission": "supplier_invoice.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/supplier-invoices/:id",
+      "permission": "supplier_invoice.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/supplier-invoices",
+      "permission": "supplier_invoice.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/supplier-invoices/:id",
+      "permission": "supplier_invoice.update"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/expenses",
+      "permission": "expense.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/expenses/:id",
+      "permission": "expense.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/expenses",
+      "permission": "expense.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/expenses/:id",
+      "permission": "expense.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/customer-invoices/:id/submit",
+      "permission": "invoice.submit"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/customer-invoices/:id/approve",
+      "permission": "invoice.approve"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/customer-invoices/:id/post",
+      "permission": "invoice.post"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/customer-invoices/:id/send",
+      "permission": "invoice.send"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/customer-invoices/:id/cancel",
+      "permission": "invoice.cancel"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/supplier-invoices/:id/match",
+      "permission": "supplier_invoice.match"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/supplier-invoices/:id/approve",
+      "permission": "supplier_invoice.approve"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/payments",
+      "permission": "payment.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payments",
+      "permission": "payment.create"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/accounts",
+      "permission": "account.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/journal-entries",
+      "permission": "journal.create"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/journal-entries/:id/post",
+      "permission": "journal.post"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/finance/receivables",
+      "permission": "finance.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/finance/payables",
+      "permission": "finance.view"
+    }
+  ],
+  "newPhysicalModelCount": 14,
+  "newPhysicalModels": [
+    "CustomerInvoice",
+    "CustomerInvoiceItem",
+    "SupplierInvoice",
+    "SupplierInvoiceItem",
+    "Payment",
+    "PaymentAllocation",
+    "Expense",
+    "ExpenseItem",
+    "FinancialPeriod",
+    "Account",
+    "JournalEntry",
+    "JournalLine",
+    "CreditNote",
+    "DebitNote"
+  ],
+  "sourceCustomerInvoiceStatuses": [
+    "DRAFT",
+    "APPROVED",
+    "SENT",
+    "PARTIALLY_PAID",
+    "PAID",
+    "OVERDUE",
+    "CANCELLED"
+  ],
+  "canonicalEvents": [
+    "invoice.sent"
+  ],
+  "runtimeCertification": "PENDING_ENVIRONMENT"
+}

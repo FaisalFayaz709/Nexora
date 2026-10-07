@@ -1,0 +1,39 @@
+{
+  "pass": "PASS_18",
+  "name": "Frontend Completion Certification",
+  "status": "PASS_18_SOURCE_LEVEL_RUNTIME_PENDING",
+  "lockedStackPreserved": true,
+  "runtimeStillPending": true,
+  "counts": {
+    "frontendSourceFiles": 531,
+    "nextPageRoutes": 327,
+    "screenContracts": 327,
+    "moduleApiFiles": 18,
+    "moduleColumnFiles": 19
+  },
+  "requiredFrontendDecisions": [
+    "shadcn/ui primitive components",
+    "NEXORA reusable app/data/forms/workflow/feedback wrappers",
+    "React Hook Form + Zod create/edit/command forms",
+    "TanStack Table ERP grids",
+    "TanStack Query server-state hooks",
+    "centralized Fastify /api/v1 API client",
+    "route-group AppShell/PortalShell/TechnicianPwaShell wrapping",
+    "screen-by-screen contracts"
+  ],
+  "noViolationRules": [
+    "No Next.js duplicate business API",
+    "No raw fetch outside frontend/src/lib/api-client.ts",
+    "No frontend imports from backend/database/worker/server-only packages",
+    "No raw ERP tables outside approved DataTable/shadcn primitives",
+    "No direct AppShell imports in page.tsx after route group layouts",
+    "No free status PATCH from edit forms"
+  ],
+  "completedByPass18": [
+    "Integration webhook screen converted from ad-hoc state/raw table to RHF/Zod form + TanStack DataTable grids",
+    "Integration module api.ts aligned with endpoint constants, query keys and approved API wrappers",
+    "Integration module columns.tsx added",
+    "Missing screen contracts added for integration webhooks, receipt voucher and workflow rules",
+    "R6 screen manifest regenerated to match active Next.js page routes"
+  ]
+}

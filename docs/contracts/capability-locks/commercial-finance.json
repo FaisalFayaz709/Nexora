@@ -1,0 +1,94 @@
+{
+  "name": "Commercial Finance",
+  "lockedRouteCount": 12,
+  "lockedRoutes": [
+    {
+      "method": "POST",
+      "path": "/api/v1/landed-costs",
+      "permission": "landed_cost.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/landed-costs/:id/allocate",
+      "permission": "landed_cost.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/landed-costs/:id/post",
+      "permission": "landed_cost.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tax-codes",
+      "permission": "tax.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tax-rules",
+      "permission": "tax.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tax/calculate",
+      "permission": "tax.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tax/reports",
+      "permission": "tax.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bank-accounts",
+      "permission": "bank.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/bank-statements/import",
+      "permission": "bank.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/bank-reconciliations/:id/close",
+      "permission": "bank.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/vouchers/payment",
+      "permission": "bank.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/vouchers/receipt",
+      "permission": "bank.manage"
+    }
+  ],
+  "newPhysicalModelCount": 17,
+  "newPhysicalModels": [
+    "LandedCost",
+    "LandedCostLine",
+    "LandedCostAllocation",
+    "TaxCode",
+    "TaxRate",
+    "TaxRule",
+    "TaxJurisdiction",
+    "TaxTransaction",
+    "WithholdingTaxRule",
+    "BankAccount",
+    "CashAccount",
+    "BankStatement",
+    "BankStatementLine",
+    "BankReconciliation",
+    "PaymentVoucher",
+    "ReceiptVoucher",
+    "ChequeRegister"
+  ],
+  "existingModelExtended": "InventoryCostLayer",
+  "canonicalAreas": [
+    "Landed Cost",
+    "Tax Engine",
+    "Bank & Cash",
+    "Receipt Voucher"
+  ],
+  "runtimeCertification": "PENDING_ENVIRONMENT_PASS_15_RECEIPT_VOUCHER_SOURCE_ADDED"
+}

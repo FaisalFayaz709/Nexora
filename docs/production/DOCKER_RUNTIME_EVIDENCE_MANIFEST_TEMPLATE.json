@@ -1,0 +1,33 @@
+{
+  "pass": "R19",
+  "gate": "R19_DOCKER_RUNTIME_CERTIFICATION",
+  "generatedAt": "YYYY-MM-DDTHH:mm:ssZ",
+  "composeProjectName": "nexora_r19_cert",
+  "httpGatewayPort": "8080",
+  "apiBaseUrl": "http://127.0.0.1:8080/api/v1",
+  "evidenceDirectory": "certification-output/docker-runtime-r19",
+  "requiredEvidence": [
+    "r19-docker-runtime-certification.log",
+    "docker-compose.config.yml",
+    "docker-compose-ps.txt",
+    "nginx-healthz.txt",
+    "api-live.json",
+    "api-ready.json",
+    "web-home.html",
+    "minio-upload-download-proof.txt",
+    "docker-compose-logs.tail.txt",
+    "r19-runtime-evidence-manifest.json"
+  ],
+  "requiredServices": [
+    "postgres",
+    "redis",
+    "minio",
+    "minio-init",
+    "migrator",
+    "api",
+    "worker",
+    "web",
+    "nginx"
+  ],
+  "runtimeStatus": "PASS_DOCKER_RUNTIME_CERTIFIED_WITH_EVIDENCE"
+}

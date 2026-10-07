@@ -1,0 +1,30 @@
+{
+  "pass": "PASS_23",
+  "capability": "runtime_deployment_certification",
+  "status": "SOURCE_LOCKED_RUNTIME_PENDING",
+  "lockedStack": [
+    "Next.js + TypeScript",
+    "Tailwind CSS + shadcn/ui reusable components",
+    "Fastify + TypeScript",
+    "PostgreSQL + Prisma",
+    "MinIO",
+    "Redis + BullMQ",
+    "Docker + Docker Compose",
+    "Nginx",
+    "GitHub Actions",
+    "Terraform later"
+  ],
+  "requiredServices": [
+    "postgres",
+    "redis",
+    "minio",
+    "minio-init",
+    "migrator",
+    "api",
+    "worker",
+    "web",
+    "nginx"
+  ],
+  "requiredEvidenceDirectory": "certification-output/pass-23-runtime-deployment",
+  "goDecisionRule": "GO requires real lockfile, frozen install, static gates, tests, build, migrations, seed, Docker runtime, health checks, MinIO proof, E2E/security evidence and manifest. Source-only PASS remains HOLD."
+}

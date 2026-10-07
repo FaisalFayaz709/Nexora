@@ -1,0 +1,21 @@
+{
+  "capability": "PASS_24_OPERATIONS_OBSERVABILITY_BACKUP_DR",
+  "status": "SOURCE_LEVEL_RUNTIME_EVIDENCE_REQUIRED",
+  "lockedStackDeviation": false,
+  "runtimeRequired": true,
+  "blocksProductionGo": true,
+  "sourceControls": [
+    "performance_slo_gate",
+    "database_query_plan_gate",
+    "backup_restore_rpo_rto_gate",
+    "object_storage_recovery_gate",
+    "redis_recovery_gate",
+    "observability_alerting_gate",
+    "health_readiness_liveness_gate",
+    "queue_backpressure_dlq_gate",
+    "incident_response_dr_rollback_gate",
+    "tenant_export_gate"
+  ],
+  "runtimeEvidenceFolder": "certification-output/pass-24-operations-observability-backup-dr/",
+  "finalDecision": "HOLD_OPERATIONS_RUNTIME_EVIDENCE_REQUIRED"
+}

@@ -1,0 +1,88 @@
+{
+  "name": "Procurement & Inventory Commercial Extensions",
+  "lockedRouteCount": 10,
+  "lockedRoutes": [
+    {
+      "method": "POST",
+      "path": "/api/v1/vendor-onboarding/requests",
+      "permission": "vendor.onboard"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/vendor-onboarding/:id/submit",
+      "permission": "vendor.onboard"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/vendor-onboarding/:id/approve",
+      "permission": "vendor.risk.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/stock-counts",
+      "permission": "stock_count.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/stock-counts/:id/start",
+      "permission": "stock_count.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/stock-counts/:id/submit",
+      "permission": "stock_count.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/stock-counts/:id/post",
+      "permission": "stock_count.post"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/purchase-contracts",
+      "permission": "purchase_contract.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/purchase-contracts/:id/approve",
+      "permission": "purchase_contract.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/purchase-contracts/:id/create-release-order",
+      "permission": "purchase_contract.manage"
+    }
+  ],
+  "commercialAreas": [
+    "Vendor Onboarding & Risk",
+    "Physical Stock Count / Cycle Count",
+    "Purchase Contracts / Blanket Purchase Orders"
+  ],
+  "sourceModelCountPlusSupport": 13,
+  "models": [
+    "VendorOnboardingRequest",
+    "VendorRiskAssessment",
+    "StockCount",
+    "StockCountLine",
+    "StockCountVariance",
+    "StockCountApproval",
+    "StockCountPosting",
+    "PurchaseContract",
+    "PurchaseContractItem",
+    "BlanketPurchaseOrder",
+    "BlanketPurchaseOrderItem",
+    "PurchaseReleaseOrder",
+    "PurchaseReleaseOrderItem"
+  ],
+  "supportModel": "VendorRiskAssessment",
+  "existingPassModelsHardened": [
+    "Vendor",
+    "VendorOnboardingRequest",
+    "StockCount",
+    "StockCountLine",
+    "StockCountVariance",
+    "StockCountApproval",
+    "StockCountPosting"
+  ],
+  "runtimeCertification": "PENDING_ENVIRONMENT"
+}

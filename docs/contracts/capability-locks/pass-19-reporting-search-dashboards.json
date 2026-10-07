@@ -1,0 +1,20 @@
+{
+  "pass": "PASS_19_REPORTING_SEARCH_DASHBOARDS",
+  "status": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+  "lockedArchitecture": "Next.js TypeScript frontend + Fastify TypeScript backend + PostgreSQL/Prisma + MinIO + Redis/BullMQ + Docker Compose",
+  "scope": [
+    "role dashboards",
+    "reports",
+    "custom report builder",
+    "saved reports",
+    "scheduled reports",
+    "saved views",
+    "global search",
+    "calendar",
+    "activity/audit timeline visibility"
+  ],
+  "routeCountAddedOrExpanded": 16,
+  "endpointCatalogCount": 316,
+  "screenContracts": 333,
+  "runtimeStatus": "HOLD_UNTIL_PNPM_LOCKFILE_AND_LOCAL_RUNTIME_CERTIFICATION"
+}

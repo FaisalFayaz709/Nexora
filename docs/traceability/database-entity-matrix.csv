@@ -1,0 +1,211 @@
+domain,entity,key_fields_or_relationship_note,purpose,source,implementation_state
+Identity & Access,User,"id, email, passwordHash, status, lastLoginAt",Global login identity,Core §7,IMPLEMENTED_STATIC_ONLY
+Identity & Access,Session,"id, userId, refreshTokenHash, device, ip, expiresAt, revokedAt",Revocable login session,Core §7,IMPLEMENTED_STATIC_ONLY
+Identity & Access,MfaCredential,"id, userId, type, secretEncrypted, enabledAt",MFA enrollment,Core §7,IMPLEMENTED_STATIC_ONLY
+Identity & Access,Permission,"id, key, description",Canonical permission key,Core §7,IMPLEMENTED_STATIC_ONLY
+Identity & Access,Role,"id, organizationId, name, systemRole",Tenant role,Core §7,IMPLEMENTED_STATIC_ONLY
+Identity & Access,RolePermission,"roleId, permissionId",Role-permission bridge,Core §7,IMPLEMENTED_STATIC_ONLY
+Identity & Access,OrganizationMembership,"id, userId, organizationId, branchId, status",User participation in tenant,Core §7,IMPLEMENTED_STATIC_ONLY
+Identity & Access,UserRole,"membershipId, roleId",Role assignment in tenant,Core §7,IMPLEMENTED_STATIC_ONLY
+Organization,Organization,"id, code, name, currency, timezone, locale, status",Tenant root,Core §7,IMPLEMENTED_STATIC_ONLY
+Organization,Branch,"id, organizationId, code, name, addressId",Operating branch,Core §7,IMPLEMENTED_STATIC_ONLY
+Organization,Department,"id, organizationId, branchId, name, managerEmployeeId",Functional department,Core §7,IMPLEMENTED_STATIC_ONLY
+Organization,Team,"id, organizationId, departmentId, name",Optional team grouping,Core §7,IMPLEMENTED_STATIC_ONLY
+Organization,Address,"id, organizationId, type, lines, city, region, country",Reusable address,Core §7,IMPLEMENTED_STATIC_ONLY
+Organization,OrganizationSetting,"id, organizationId, key, valueJson",Tenant configuration,Core §7,IMPLEMENTED_STATIC_ONLY
+HR,Employee,"id, organizationId, userId, branchId, departmentId, employeeNo, managerId, status",Employee master,Core §7,IMPLEMENTED_STATIC_ONLY
+HR,EmployeeSkill,"employeeId, skillId, proficiency",Employee skill mapping,Core §7,IMPLEMENTED_STATIC_ONLY
+HR,EmployeeCertification,"id, employeeId, name, issuedAt, expiresAt, documentId",Certification history,Core §7,IMPLEMENTED_STATIC_ONLY
+HR,Attendance,"id, employeeId, workDate, checkIn, checkOut, status",Daily attendance,Core §7,IMPLEMENTED_STATIC_ONLY
+HR,LeaveType,"id, organizationId, name, annualAllowance",Leave policy type,Core §7,IMPLEMENTED_STATIC_ONLY
+HR,LeaveBalance,"id, employeeId, leaveTypeId, year, opening, used, remaining",Leave balance,Core §7,IMPLEMENTED_STATIC_ONLY
+HR,LeaveRequest,"id, employeeId, leaveTypeId, fromDate, toDate, status, approvalRequestId",Leave workflow,Core §7,IMPLEMENTED_STATIC_ONLY
+HR,PayrollRun,"id, organizationId, periodStart, periodEnd, status",Payroll batch,Core §7,IMPLEMENTED_STATIC_ONLY
+HR,PayrollItem,"id, payrollRunId, employeeId, gross, deductions, net",Employee payroll result,Core §7,IMPLEMENTED_STATIC_ONLY
+CRM & Customer,Lead,"id, organizationId, ownerId, source, name, status",Prospect lead,Core §7,IMPLEMENTED_STATIC_ONLY
+CRM & Customer,Opportunity,"id, organizationId, customerId, leadId, ownerId, stage, estimatedValue",Sales opportunity,Core §7,IMPLEMENTED_STATIC_ONLY
+CRM & Customer,SiteSurvey,"id, organizationId, opportunityId, customerSiteId, engineerId, status",Technical survey,Core §7,IMPLEMENTED_STATIC_ONLY
+CRM & Customer,Quotation,"id, organizationId, opportunityId, customerId, quoteNo, status, validUntil, totals",Commercial quotation,Core §7,IMPLEMENTED_STATIC_ONLY
+CRM & Customer,QuotationItem,"id, quotationId, productId, description, qty, price, tax",Quotation line,Core §7,IMPLEMENTED_STATIC_ONLY
+CRM & Customer,SalesOrder,"id, organizationId, quotationId, customerId, orderNo, status, total",Accepted sale,Core §7,IMPLEMENTED_STATIC_ONLY
+CRM & Customer,Contract,"id, organizationId, customerId, salesOrderId, contractNo, startDate, endDate, value, status",Customer contract,Core §7,NOT_IMPLEMENTED
+CRM & Customer,ServicePackage,"id, organizationId, name, responseSla, resolutionSla, billingCycle",Service plan template,Core §7,NOT_IMPLEMENTED
+CRM & Customer,Customer,"id, organizationId, code, name, taxNo, status, creditLimit",Customer master,Core §7,IMPLEMENTED_STATIC_ONLY
+CRM & Customer,CustomerContact,"id, customerId, name, email, phone, isPrimary",Customer person,Core §7,IMPLEMENTED_STATIC_ONLY
+CRM & Customer,CustomerSite,"id, organizationId, customerId, code, name, addressId",Service/project location,Core §7,IMPLEMENTED_STATIC_ONLY
+CRM & Customer,SiteBuilding,"id, customerSiteId, name",Building grouping,Core §7,IMPLEMENTED_STATIC_ONLY
+CRM & Customer,SiteArea,"id, buildingId, parentAreaId, name, areaType",Floor/room/zone hierarchy,Core §7,IMPLEMENTED_STATIC_ONLY
+Vendors,Vendor,"id, organizationId, code, name, taxNo, status, paymentTerms",Supplier master,Core §7,IMPLEMENTED_STATIC_ONLY
+Vendors,VendorContact,"id, vendorId, name, email, phone, isPrimary",Supplier person,Core §7,IMPLEMENTED_STATIC_ONLY
+Vendors,VendorProduct,"vendorId, productId, vendorSku, leadTimeDays, lastPrice",Approved vendor-product link,Core §7,IMPLEMENTED_STATIC_ONLY
+Vendors,VendorPerformance,"id, vendorId, period, onTimePct, rejectPct, score",Periodic performance snapshot,Core §7,IMPLEMENTED_STATIC_ONLY
+Product & Inventory,ProductCategory,"id, organizationId, parentId, name",Product taxonomy,Core §7,IMPLEMENTED_STATIC_ONLY
+Product & Inventory,Product,"id, organizationId, categoryId, sku, name, unitId, trackingType, minStock, maxStock",Item/service master,Core §7,IMPLEMENTED_STATIC_ONLY
+Product & Inventory,UnitOfMeasure,"id, organizationId, code, name, precision",Quantity unit,Core §7,IMPLEMENTED_STATIC_ONLY
+Product & Inventory,Warehouse,"id, organizationId, branchId, code, name, status",Stock location,Core §7,IMPLEMENTED_STATIC_ONLY
+Product & Inventory,WarehouseLocation,"id, warehouseId, parentId, type, code, name",Zone/rack/shelf/bin tree,Core §7,IMPLEMENTED_STATIC_ONLY
+Product & Inventory,StockBalance,"id, organizationId, warehouseId, locationId, productId, onHand, reserved",Materialized current balance,Core §7,IMPLEMENTED_STATIC_ONLY
+Product & Inventory,StockTransaction,"id, organizationId, productId, warehouseId, locationId, type, qty, referenceType, referenceId, occurredAt",Immutable stock ledger,Core §7,IMPLEMENTED_STATIC_ONLY
+Product & Inventory,StockReservation,"id, organizationId, productId, warehouseId, projectId, qty, status",Reserved inventory,Core §7,IMPLEMENTED_STATIC_ONLY
+Product & Inventory,StockTransfer,"id, organizationId, fromWarehouseId, toWarehouseId, transferNo, status",Warehouse movement header,Core §7,IMPLEMENTED_STATIC_ONLY
+Product & Inventory,StockTransferItem,"id, transferId, productId, qty, receivedQty",Transfer line,Core §7,IMPLEMENTED_STATIC_ONLY
+Product & Inventory,SerialNumber,"id, organizationId, productId, serialNo, status, currentWarehouseId, assetId",Individually tracked unit,Core §7,IMPLEMENTED_STATIC_ONLY
+Product & Inventory,BatchLot,"id, organizationId, productId, lotNo, manufactureDate, expiryDate, qtyRemaining",Lot-tracked stock,Core §7,IMPLEMENTED_STATIC_ONLY
+Product & Inventory,StockAdjustment,"id, organizationId, warehouseId, reason, status, approvalRequestId",Controlled correction,Core §7,IMPLEMENTED_STATIC_ONLY
+Procurement,MaterialRequirement,"id, organizationId, projectId, requestedById, status",Project/department material need,Core §7,IMPLEMENTED_STATIC_ONLY
+Procurement,PurchaseRequest,"id, organizationId, branchId, projectId, prNo, requesterId, requiredDate, status, approvalRequestId",Internal purchase request,Core §7,IMPLEMENTED_STATIC_ONLY
+Procurement,PurchaseRequestItem,"id, purchaseRequestId, productId, description, qty, estimatedPrice",PR line,Core §7,IMPLEMENTED_STATIC_ONLY
+Procurement,RFQ,"id, organizationId, purchaseRequestId, rfqNo, closesAt, status",Supplier bidding request,Core §7,IMPLEMENTED_STATIC_ONLY
+Procurement,RFQVendor,"rfqId, vendorId, invitedAt, responseStatus",RFQ invitation,Core §7,IMPLEMENTED_STATIC_ONLY
+Procurement,SupplierQuotation,"id, organizationId, rfqId, vendorId, quoteRef, validity, total, status",Vendor commercial response,Core §7,IMPLEMENTED_STATIC_ONLY
+Procurement,SupplierQuotationItem,"id, supplierQuotationId, productId, qty, unitPrice, deliveryDays, warrantyMonths",Vendor line quote,Core §7,IMPLEMENTED_STATIC_ONLY
+Procurement,PurchaseOrder,"id, organizationId, vendorId, supplierQuotationId, poNo, orderDate, expectedDate, status, total",Purchase commitment,Core §7,IMPLEMENTED_STATIC_ONLY
+Procurement,PurchaseOrderItem,"id, purchaseOrderId, productId, orderedQty, receivedQty, unitPrice, tax",PO line,Core §7,IMPLEMENTED_STATIC_ONLY
+Procurement,GoodsReceipt,"id, organizationId, purchaseOrderId, warehouseId, grnNo, receivedAt, receivedById, status",Goods receiving header,Core §7,IMPLEMENTED_STATIC_ONLY
+Procurement,GoodsReceiptItem,"id, goodsReceiptId, poItemId, productId, receivedQty, acceptedQty, damagedQty",Received line,Core §7,IMPLEMENTED_STATIC_ONLY
+Procurement,QualityInspection,"id, organizationId, goodsReceiptId, inspectorId, result, notes",Receiving quality check,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,Project,"id, organizationId, customerId, contractId, siteId, projectNo, managerId, status, startDate, dueDate, contractValue",Project aggregate root,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,ProjectPhase,"id, projectId, name, sequence, status",Project phase,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,ProjectTask,"id, projectId, phaseId, assigneeId, title, status, priority, startDate, dueDate, completionPct",Work item,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,ProjectTaskDependency,"taskId, dependsOnTaskId, type",Task dependency,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,ProjectMilestone,"id, projectId, name, dueDate, achievedAt, status",Milestone,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,ProjectMember,"projectId, employeeId, role, allocationPct",Project team,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,BillOfMaterials,"id, projectId, version, status",Project BOM header,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,BOMItem,"id, billOfMaterialsId, productId, requiredQty, reservedQty, issuedQty",Material plan line,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,ProjectBudget,"id, projectId, version, status, totalBudget",Budget header,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,ProjectBudgetLine,"id, projectBudgetId, category, budgetAmount, committedAmount, actualAmount",Budget category,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,ProjectExpense,"id, projectId, expenseId, costCategory",Project cost link,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,ProjectRisk,"id, projectId, title, probability, impact, ownerId, status",Risk register,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,ProjectIssue,"id, projectId, title, severity, ownerId, status",Issue register,Core §7,IMPLEMENTED_STATIC_ONLY
+Projects,ProjectHandover,"id, projectId, acceptedByCustomerId, acceptedAt, documentId, status",Project completion evidence,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,Asset,"id, organizationId, assetNo, productId, serialNumberId, customerId, siteId, areaId, projectId, status, installedAt",Installed/customer asset,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,AssetInstallation,"id, assetId, projectId, technicianId, installedAt, locationText, checklistId",Installation evidence,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,AssetHistory,"id, assetId, eventType, oldStatus, newStatus, referenceType, referenceId, occurredAt",Asset lifecycle log,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,AssetWarranty,"id, assetId, vendorId, startsAt, expiresAt, terms, status",Warranty coverage,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,AssetQrTag,"id, assetId, token, generatedAt, revokedAt",QR lookup token,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,AssetRMA,"id, assetId, vendorId, rmaNo, status, sentAt, returnedAt, resolution",Vendor return process,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,Ticket,"id, organizationId, ticketNo, customerId, siteId, assetId, category, priority, status, openedById, slaPolicyId",Support request,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,TicketComment,"id, ticketId, authorId, visibility, body, createdAt",Ticket conversation,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,SlaPolicy,"id, organizationId, name, priority, responseMinutes, resolutionMinutes",SLA rule,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,WorkOrder,"id, organizationId, workOrderNo, ticketId, assetId, projectId, status, scheduledAt, priority",Field job,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,WorkOrderAssignment,"id, workOrderId, technicianId, assignedAt, acceptedAt",Technician assignment,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,TechnicianProfile,"employeeId, availabilityStatus, homeBranchId",Technician extension,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,ServiceReport,"id, workOrderId, technicianId, arrivalAt, departureAt, rootCause, resolution, customerSignDocumentId",Completion report,Core §7,IMPLEMENTED_STATIC_ONLY
+Assets & Field Service,ServiceReportPart,"id, serviceReportId, productId, qty, stockTransactionId",Part used,Core §7,IMPLEMENTED_STATIC_ONLY
+Maintenance,MaintenancePlan,"id, organizationId, assetId, contractId, frequencyType, intervalValue, active",Preventive plan,Core §7,IMPLEMENTED_STATIC_ONLY
+Maintenance,MaintenanceSchedule,"id, maintenancePlanId, dueAt, status, generatedWorkOrderId",Planned occurrence,Core §7,IMPLEMENTED_STATIC_ONLY
+Maintenance,MaintenanceExecution,"id, scheduleId, workOrderId, completedAt, result, nextDueAt",Executed maintenance,Core §7,IMPLEMENTED_STATIC_ONLY
+Maintenance,MaintenanceChecklist,"id, organizationId, name, version",Checklist template,Core §7,IMPLEMENTED_STATIC_ONLY
+Maintenance,MaintenancePart,"id, maintenanceExecutionId, productId, qty, stockTransactionId",Maintenance consumable,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,CustomerInvoice,"id, organizationId, invoiceNo, customerId, projectId, contractId, issueDate, dueDate, status, subtotal, tax, total, balance",Accounts receivable invoice,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,CustomerInvoiceItem,"id, invoiceId, productId, description, qty, unitPrice, tax, lineTotal",AR invoice line,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,SupplierInvoice,"id, organizationId, invoiceNo, vendorId, purchaseOrderId, goodsReceiptId, status, total, matchStatus",Accounts payable invoice,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,SupplierInvoiceItem,"id, supplierInvoiceId, poItemId, description, qty, unitPrice, lineTotal",AP invoice line,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,Payment,"id, organizationId, paymentNo, direction, partyType, partyId, amount, method, paidAt, status",Cash settlement,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,PaymentAllocation,"id, paymentId, invoiceType, invoiceId, amount",Payment-to-invoice bridge,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,Expense,"id, organizationId, employeeId, projectId, category, incurredAt, status, total, approvalRequestId",Employee/operating expense,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,ExpenseItem,"id, expenseId, description, amount, tax, documentId",Expense detail,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,FinancialPeriod,"id, organizationId, startDate, endDate, status",Accounting period,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,Account,"id, organizationId, code, name, type, parentId, active",Chart of accounts,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,JournalEntry,"id, organizationId, periodId, entryNo, postedAt, referenceType, referenceId, status",Accounting posting header,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,JournalLine,"id, journalEntryId, accountId, debit, credit, projectId, branchId",Double-entry line,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,CreditNote,"id, organizationId, customerInvoiceId, noteNo, total, status",Customer credit adjustment,Core §7,IMPLEMENTED_STATIC_ONLY
+Finance & Accounting,DebitNote,"id, organizationId, supplierInvoiceId, noteNo, total, status",Supplier debit adjustment,Core §7,IMPLEMENTED_STATIC_ONLY
+"Approvals, Documents & Platform",ApprovalDefinition,"id, organizationId, subjectType, name, conditionJson, active",Approval workflow definition,Core §7,IMPLEMENTED_STATIC_ONLY
+"Approvals, Documents & Platform",ApprovalStepDefinition,"id, approvalDefinitionId, sequence, approverType, approverRef, minApprovals",Workflow step template,Core §7,IMPLEMENTED_STATIC_ONLY
+"Approvals, Documents & Platform",ApprovalRequest,"id, organizationId, subjectType, subjectId, definitionId, status, requestedById",Approval instance,Core §7,IMPLEMENTED_STATIC_ONLY
+"Approvals, Documents & Platform",ApprovalStep,"id, approvalRequestId, sequence, approverType, approverRef, status",Approval instance step,Core §7,IMPLEMENTED_STATIC_ONLY
+"Approvals, Documents & Platform",ApprovalAction,"id, approvalStepId, actorId, action, comment, actedAt",Approval audit action,Core §7,IMPLEMENTED_STATIC_ONLY
+"Approvals, Documents & Platform",Document,"id, organizationId, fileName, mimeType, size, bucket, objectKey, checksum, uploadedById",Object metadata,Core §7,IMPLEMENTED_STATIC_ONLY
+"Approvals, Documents & Platform",DocumentVersion,"id, documentId, versionNo, objectKey, checksum, uploadedAt",File version,Core §7,IMPLEMENTED_STATIC_ONLY
+"Approvals, Documents & Platform",DocumentLink,"id, documentId, subjectType, subjectId, category",Generic attachment link,Core §7,IMPLEMENTED_STATIC_ONLY
+"Approvals, Documents & Platform",Notification,"id, organizationId, userId, type, title, body, readAt, createdAt",In-app notification,Core §7,IMPLEMENTED_STATIC_ONLY
+"Approvals, Documents & Platform",EmailOutbox,"id, organizationId, template, recipient, payloadJson, status, attempts",Reliable email dispatch,Core §7,IMPLEMENTED_STATIC_ONLY
+"Approvals, Documents & Platform",WebhookEndpoint,"id, organizationId, url, secretEncrypted, eventsJson, active",External webhook config,Core §7,NOT_IMPLEMENTED
+"Approvals, Documents & Platform",WebhookDelivery,"id, endpointId, eventId, statusCode, attempts, deliveredAt",Webhook attempt log,Core §7,NOT_IMPLEMENTED
+"Approvals, Documents & Platform",AuditLog,"id, organizationId, actorUserId, action, subjectType, subjectId, beforeJson, afterJson, ip, createdAt",Immutable business audit,Core §7,IMPLEMENTED_STATIC_ONLY
+"Approvals, Documents & Platform",BusinessEvent,"id, organizationId, type, aggregateType, aggregateId, payloadJson, occurredAt, publishedAt",Outbox/event record,Core §7,IMPLEMENTED_STATIC_ONLY
+"Approvals, Documents & Platform",CustomFieldDefinition,"id, organizationId, subjectType, key, label, dataType, optionsJson",Tenant custom field,Core §7,NOT_IMPLEMENTED
+"Approvals, Documents & Platform",CustomFieldValue,"id, definitionId, subjectId, valueJson",Custom value,Core §7,NOT_IMPLEMENTED
+"Approvals, Documents & Platform",BusinessRule,"id, organizationId, triggerType, conditionJson, actionJson, active",Deterministic rule config,Core §7,NOT_IMPLEMENTED
+"Approvals, Documents & Platform",IdempotencyKey,"id, organizationId, key, route, requestHash, responseJson, expiresAt",Duplicate mutation guard,Core §7,IMPLEMENTED_STATIC_ONLY
+Advanced Operations,Vehicle,"id, organizationId, branchId, registrationNo, make, model, status",Fleet asset,Core §7,NOT_IMPLEMENTED
+Advanced Operations,VehicleMaintenance,"id, vehicleId, serviceDate, cost, odometer, notes",Vehicle service history,Core §7,NOT_IMPLEMENTED
+Advanced Operations,FuelLog,"id, vehicleId, employeeId, date, liters, cost, odometer",Fuel tracking,Core §7,NOT_IMPLEMENTED
+Advanced Operations,Tool,"id, organizationId, toolNo, name, serialNo, status",Reusable field tool,Core §7,NOT_IMPLEMENTED
+Advanced Operations,ToolAssignment,"id, toolId, employeeId, issuedAt, dueAt, returnedAt",Tool custody,Core §7,NOT_IMPLEMENTED
+Advanced Operations,SafetyIncident,"id, organizationId, projectId, siteId, reportedById, severity, status",Safety incident,Core §7,IMPLEMENTED_STATIC_ONLY
+Advanced Operations,CorrectiveAction,"id, safetyIncidentId, ownerId, dueDate, status, action",Safety corrective action,Core §7,NOT_IMPLEMENTED
+Advanced Operations,InspectionTemplate,"id, organizationId, subjectType, name, version",Quality checklist template,Core §7,NOT_IMPLEMENTED
+Advanced Operations,InspectionRun,"id, templateId, subjectType, subjectId, inspectorId, result, completedAt",Inspection execution,Core §7,IMPLEMENTED_STATIC_ONLY
+Number Sequence,NumberSequence,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Number Sequence,NumberSequenceReservation,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Vendor Onboarding & Risk,VendorOnboardingRequest,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Vendor Onboarding & Risk,VendorDocument,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Vendor Onboarding & Risk,VendorBankAccount,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Vendor Onboarding & Risk,VendorRiskAssessment,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Vendor Onboarding & Risk,VendorBlacklist,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Vendor Onboarding & Risk,VendorCategoryApproval,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Purchase Contracts / Blanket PO,PurchaseContract,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Purchase Contracts / Blanket PO,PurchaseContractItem,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Purchase Contracts / Blanket PO,BlanketPurchaseOrder,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Purchase Contracts / Blanket PO,BlanketPurchaseOrderItem,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Purchase Contracts / Blanket PO,PurchaseReleaseOrder,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Purchase Contracts / Blanket PO,PurchaseReleaseOrderItem,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Stock Count / Cycle Count,StockCount,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Stock Count / Cycle Count,StockCountLine,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Stock Count / Cycle Count,StockCountVariance,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Stock Count / Cycle Count,StockCountApproval,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Stock Count / Cycle Count,StockCountPosting,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Landed Cost / Valuation,LandedCost,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Landed Cost / Valuation,LandedCostLine,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Landed Cost / Valuation,LandedCostAllocation,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Landed Cost / Valuation,InventoryCostLayer,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Tax Engine,TaxCode,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Tax Engine,TaxRate,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Tax Engine,TaxRule,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Tax Engine,TaxJurisdiction,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Tax Engine,TaxTransaction,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Tax Engine,WithholdingTaxRule,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Bank & Cash Management,BankAccount,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Bank & Cash Management,CashAccount,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Bank & Cash Management,BankStatement,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Bank & Cash Management,BankStatementLine,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Bank & Cash Management,BankReconciliation,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Bank & Cash Management,PaymentVoucher,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Bank & Cash Management,ReceiptVoucher,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Bank & Cash Management,ChequeRegister,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Data Import & Quality,ImportTemplate,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Data Import & Quality,ImportBatch,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Data Import & Quality,ImportMapping,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Data Import & Quality,ImportRow,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Data Import & Quality,ImportRowError,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Data Import & Quality,DuplicateCheckRule,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Communication Log,CommunicationTemplate,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Communication Log,CommunicationLog,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Communication Log,EmailDeliveryLog,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Communication Log,SmsDeliveryLog,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Communication Log,MessageAttachment,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Technician GPS / Visit,ServiceVisit,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Technician GPS / Visit,ServiceVisitLocation,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Technician GPS / Visit,TechnicianLocationPing,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Technician GPS / Visit,TechnicianRoute,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Technician GPS / Visit,WorkOrderCheckIn,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Technician GPS / Visit,WorkOrderCheckOut,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Custom Reporting,ReportTemplate,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Custom Reporting,SavedReport,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Custom Reporting,ScheduledReport,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Custom Reporting,ReportExecution,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Custom Reporting,DashboardWidget,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Custom Reporting,UserDashboard,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Custom Reporting,SavedView,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Feature Flags / SaaS Billing,FeatureFlag,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Feature Flags / SaaS Billing,OrganizationFeature,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Feature Flags / SaaS Billing,ModuleConfiguration,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Feature Flags / SaaS Billing,SystemConfigurationHistory,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Feature Flags / SaaS Billing,SaaSPlan,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Feature Flags / SaaS Billing,SaaSSubscription,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Feature Flags / SaaS Billing,SaaSSubscriptionFeature,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Feature Flags / SaaS Billing,SaaSInvoice,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Feature Flags / SaaS Billing,TenantUsageMetric,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY
+Feature Flags / SaaS Billing,TenantStorageUsage,See Appendix F.2; tenant-owned tables require organizationId; branchId where branch-scoped,Commercial completeness entity,Appendix F.2,IMPLEMENTED_STATIC_ONLY

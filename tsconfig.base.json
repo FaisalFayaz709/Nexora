@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "useUnknownInCatchVariables": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@nexora/shared": [
+        "shared/src/index.ts"
+      ],
+      "@nexora/shared/*": [
+        "shared/src/*"
+      ],
+      "@nexora/database": [
+        "database/src/index.ts"
+      ],
+      "@nexora/database/*": [
+        "database/src/*"
+      ]
+    }
+  }
+}

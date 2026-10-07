@@ -1,0 +1,12 @@
+# R20 branch protection helper. Keep review ownership aligned with locked architecture areas.
+* @nexora/platform-owners
+
+/backend/ @nexora/backend-owners @nexora/platform-owners
+/frontend/ @nexora/frontend-owners @nexora/platform-owners
+/shared/ @nexora/platform-owners
+/database/ @nexora/backend-owners @nexora/platform-owners
+/worker/ @nexora/backend-owners @nexora/platform-owners
+/infrastructure/ @nexora/devops-owners @nexora/platform-owners
+/.github/ @nexora/devops-owners @nexora/platform-owners
+/docs/architecture/ @nexora/platform-owners
+/docs/compliance/ @nexora/platform-owners

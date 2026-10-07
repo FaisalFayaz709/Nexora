@@ -1,0 +1,154 @@
+{
+  "name": "Procurement",
+  "implementedLockedRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/purchase-requests",
+      "permission": "purchase_request.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/purchase-requests",
+      "permission": "purchase_request.create"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/purchase-requests/:id",
+      "permission": "purchase_request.view"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/purchase-requests/:id",
+      "permission": "purchase_request.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/purchase-requests/:id/submit",
+      "permission": "purchase_request.submit"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/purchase-requests/:id/approve",
+      "permission": "purchase_request.approve"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/purchase-requests/:id/reject",
+      "permission": "purchase_request.approve"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/purchase-requests/:id/create-rfq",
+      "permission": "rfq.create"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/rfqs",
+      "permission": "rfq.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/rfqs",
+      "permission": "rfq.create"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/rfqs/:id/invite-vendors",
+      "permission": "rfq.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/rfqs/:id/publish",
+      "permission": "rfq.publish"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/rfqs/:id/close",
+      "permission": "rfq.close"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/rfqs/:id/comparison",
+      "permission": "supplier_quotation.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/supplier-quotations",
+      "permission": "supplier_quotation.create"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/supplier-quotations/:id/select",
+      "permission": "supplier_quotation.select"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/purchase-orders",
+      "permission": "purchase_order.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/purchase-orders",
+      "permission": "purchase_order.create"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/purchase-orders/:id/submit",
+      "permission": "purchase_order.submit"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/purchase-orders/:id/approve",
+      "permission": "purchase_order.approve"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/purchase-orders/:id/send",
+      "permission": "purchase_order.send"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/purchase-orders/:id/cancel",
+      "permission": "purchase_order.cancel"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/goods-receipts",
+      "permission": "goods_receipt.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/goods-receipts",
+      "permission": "goods_receipt.create"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/goods-receipts/:id",
+      "permission": "goods_receipt.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/goods-receipts/:id/inspect",
+      "permission": "goods_receipt.inspect"
+    }
+  ],
+  "routeCount": 26,
+  "newPhysicalModels": [
+    "MaterialRequirement",
+    "MaterialRequirementItem",
+    "PurchaseRequest",
+    "PurchaseRequestItem",
+    "RFQ",
+    "RFQVendor",
+    "SupplierQuotation",
+    "SupplierQuotationItem",
+    "PurchaseOrder",
+    "PurchaseOrderItem",
+    "GoodsReceipt",
+    "GoodsReceiptItem",
+    "QualityInspection"
+  ],
+  "newPhysicalModelCount": 13,
+  "criticalAtomicWorkflow": "GoodsReceipt + items + PO received quantities + accepted inventory/serial/batch/cost layer + audit + event + idempotency in the NumberSequence PostgreSQL transaction",
+  "runtimeCertification": "PENDING_ENVIRONMENT"
+}

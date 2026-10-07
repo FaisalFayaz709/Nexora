@@ -1,0 +1,72 @@
+{
+  "capability": "documents-events-communications",
+  "pass": "PASS_17",
+  "status": "PASS_17_SOURCE_LEVEL_RUNTIME_PENDING",
+  "lockedStack": [
+    "Next.js + TypeScript frontend",
+    "Tailwind CSS + shadcn/ui reusable components",
+    "React Hook Form + Zod where forms are required",
+    "TanStack Query/Table for frontend data",
+    "Fastify + TypeScript backend",
+    "PostgreSQL + Prisma",
+    "MinIO via StorageService only",
+    "Redis + BullMQ after-commit jobs"
+  ],
+  "implementedLockedRoutes": [
+    { "method": "GET", "path": "/api/v1/documents" },
+    { "method": "GET", "path": "/api/v1/documents/:id" },
+    { "method": "POST", "path": "/api/v1/documents" },
+    { "method": "DELETE", "path": "/api/v1/documents/:id" },
+    { "method": "POST", "path": "/api/v1/documents/upload-intent" },
+    { "method": "POST", "path": "/api/v1/documents/complete-upload" },
+    { "method": "GET", "path": "/api/v1/documents/:id/download-url" },
+    { "method": "POST", "path": "/api/v1/documents/:id/versions" },
+    { "method": "GET", "path": "/api/v1/notifications" },
+    { "method": "POST", "path": "/api/v1/notifications/:id/read" },
+    { "method": "POST", "path": "/api/v1/notifications/read-all" },
+    { "method": "GET", "path": "/api/v1/communications" },
+    { "method": "POST", "path": "/api/v1/communications/send" },
+    { "method": "GET", "path": "/api/v1/communications/:id/delivery" },
+    { "method": "GET", "path": "/api/v1/integration-webhooks" },
+    { "method": "GET", "path": "/api/v1/integration-webhooks/:id" },
+    { "method": "POST", "path": "/api/v1/integration-webhooks" },
+    { "method": "PATCH", "path": "/api/v1/integration-webhooks/:id" },
+    { "method": "POST", "path": "/api/v1/integration-webhooks/:id/activate" },
+    { "method": "POST", "path": "/api/v1/integration-webhooks/:id/deactivate" },
+    { "method": "GET", "path": "/api/v1/integration-webhook-deliveries" },
+    { "method": "POST", "path": "/api/v1/integration-webhooks/:id/test-delivery" }
+  ],
+  "routeCount": 22,
+  "criticalTables": [
+    "Document",
+    "DocumentVersion",
+    "DocumentLink",
+    "DocumentAccessLog",
+    "Notification",
+    "NotificationPreference",
+    "CommunicationLog",
+    "CommunicationTemplate",
+    "MessageAttachment",
+    "EmailOutbox",
+    "EmailDeliveryLog",
+    "SmsDeliveryLog",
+    "BusinessEvent",
+    "IntegrationWebhook",
+    "IntegrationWebhookDelivery"
+  ],
+  "transactionRules": [
+    "Document metadata/version/link/audit/business-event changes commit inside PostgreSQL transactions.",
+    "Communication log, message attachments, EmailOutbox/DeliveryLog/SmsDeliveryLog, audit and business event records commit together.",
+    "Webhook delivery records are tenant scoped and event bound before BullMQ delivery work is queued.",
+    "Queues never own stock, money, approval state, invoice balance or posted ledger mutations."
+  ],
+  "frontendSurfaces": [
+    "/documents",
+    "/documents/upload",
+    "/documents/[id]/download",
+    "/communications",
+    "/communications/send",
+    "/notifications",
+    "/integrations/webhooks"
+  ]
+}

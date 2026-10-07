@@ -1,0 +1,47 @@
+name: Runtime Certification
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  r19-docker-runtime-certification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: R19 source gate
+        run: node scripts/check-pass-r19-docker-runtime-certification.mjs --source-only
+      - name: R20 CI/CD hardening source gate
+        run: node scripts/check-pass-r20-cicd-hardening.mjs --source-only
+      - name: R21 final blueprint compliance audit source gate
+        run: node scripts/check-pass-r21-final-blueprint-compliance-audit.mjs --source-only
+      - name: PASS 23 runtime deployment source gate
+        run: node scripts/check-pass-23-runtime-deployment-certification.mjs --source-only
+      - name: R19 Docker runtime certification
+        run: bash scripts/pass-r19-docker-runtime-certification.sh
+      - name: PASS 23 runtime deployment certification
+        run: bash scripts/pass-23-runtime-deployment-certification-certify.sh
+      - name: Upload runtime certification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r19-docker-runtime-certification-evidence
+          path: certification-output
+
+      - name: Upload PASS 23 runtime deployment certification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass-23-runtime-deployment-certification-evidence
+          path: certification-output/pass-23-runtime-deployment

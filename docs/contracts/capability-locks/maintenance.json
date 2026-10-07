@@ -1,0 +1,79 @@
+{
+  "name": "Maintenance",
+  "lockedRouteCount": 5,
+  "lockedRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/maintenance/plans",
+      "permission": "maintenance.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/maintenance/plans",
+      "permission": "maintenance.create"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/maintenance/schedule",
+      "permission": "maintenance.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/maintenance/schedules/:id/generate-work-order",
+      "permission": "maintenance.execute"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/maintenance/executions/:id/complete",
+      "permission": "maintenance.execute"
+    }
+  ],
+  "sourcePhysicalModelCount": 5,
+  "sourcePhysicalModels": [
+    "MaintenancePlan",
+    "MaintenanceSchedule",
+    "MaintenanceExecution",
+    "MaintenanceChecklist",
+    "MaintenancePart"
+  ],
+  "implementationSupportModels": [
+    "MaintenanceChecklistItem"
+  ],
+  "frequencyTypes": [
+    "DAYS",
+    "WEEKS",
+    "MONTHS",
+    "YEARS"
+  ],
+  "scheduleStatuses": [
+    "SCHEDULED",
+    "DUE",
+    "GENERATED",
+    "COMPLETED",
+    "SKIPPED",
+    "CANCELLED"
+  ],
+  "executionStatuses": [
+    "PENDING",
+    "IN_PROGRESS",
+    "COMPLETED",
+    "CANCELLED"
+  ],
+  "resultValues": [
+    "PASSED",
+    "REPAIRED",
+    "FAILED",
+    "REPLACED"
+  ],
+  "canonicalEvents": [
+    "maintenance.due",
+    "maintenance.warranty_rma.review_required"
+  ],
+  "runtimeCertification": "PASS_14_SOURCE_LEVEL_RUNTIME_PENDING",
+  "frontendCompletion": "PASS_14_CONTROLLED_RHF_PARTS_FIELD_ARRAY",
+  "maintenanceRmaControls": [
+    "failed-or-replaced-execution-result-emits-maintenance.warranty_rma.review_required",
+    "asset-rma-request-remains-owned-by-assets-domain-facade-boundary",
+    "maintenance-completion-writes-parts-stock-ledger-asset-history-next-schedule-and-audit-in-one-transaction"
+  ]
+}

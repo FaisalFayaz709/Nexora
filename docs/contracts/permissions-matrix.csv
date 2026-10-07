@@ -1,0 +1,173 @@
+permission_key,purpose,source,status
+account.view,View chart of accounts,Core §11.1 permission catalog,LOCKED
+approval.act,Approve/reject/return,Core §11.1 permission catalog,LOCKED
+approval.view,View approval inbox,Core §11.1 permission catalog,LOCKED
+asset.create,Register assets,Core §11.1 permission catalog,LOCKED
+asset.install,Install assets,Core §11.1 permission catalog,LOCKED
+asset.manage_qr,Rotate/manage QR tokens,Core §11.1 permission catalog,LOCKED
+asset.replace,Replace assets,Core §11.1 permission catalog,LOCKED
+asset.retire,Retire assets,Core §11.1 permission catalog,LOCKED
+asset.rma,Manage RMA,Core §11.1 permission catalog,LOCKED
+asset.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+asset.view,View assets,Core §11.1 permission catalog,LOCKED
+attendance.manage,Manage attendance,Core §11.1 permission catalog,LOCKED
+attendance.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+audit.view,View audit logs,Core §11.1 permission catalog,LOCKED
+bank.manage,Manage bank/cash accounts and reconciliation,Appendix F.4 permission additions,LOCKED
+branch.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+branch.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+branch.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+communication.send,Send approved communications,Appendix F.4 permission additions,LOCKED
+communication.view,View communication history,Appendix F.4 permission additions,LOCKED
+contract.activate,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+contract.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+contract.manage,Manage contracts,Core §11.1 permission catalog,LOCKED
+contract.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+contract.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+customer.create,Create customers,Core §11.1 permission catalog,LOCKED
+customer.update,Update customers,Core §11.1 permission catalog,LOCKED
+customer.view,View customers,Core §11.1 permission catalog,LOCKED
+customer_site.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+customer_site.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+customer_site.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+department.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+department.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+department.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+document.create,Upload documents,Core §11.1 permission catalog,LOCKED
+document.delete,Delete/archive documents,Core §11.1 permission catalog,LOCKED
+document.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+document.view,View documents,Core §11.1 permission catalog,LOCKED
+employee.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+employee.manage,Manage employee records,Core §11.1 permission catalog,LOCKED
+employee.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+employee.view,View employees,Core §11.1 permission catalog,LOCKED
+expense.approve,Approve expenses,Core §11.1 permission catalog,LOCKED
+expense.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+expense.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+expense.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+feature.manage,Manage tenant feature flags and module configuration,Appendix F.4 permission additions,LOCKED
+finance.view,View AR/AP reports,Core §11.1 permission catalog,LOCKED
+goods_receipt.create,Receive goods,Core §11.1 permission catalog,LOCKED
+goods_receipt.inspect,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+goods_receipt.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+identity.role.manage,Manage roles and permissions,Core §11.1 permission catalog,LOCKED
+identity.user.manage,Create/update/suspend users,Core §11.1 permission catalog,LOCKED
+identity.user.view,View tenant users,Core §11.1 permission catalog,LOCKED
+import.manage,"Validate, commit and rollback data imports",Appendix F.4 permission additions,LOCKED
+inventory.adjust,Create/post adjustments,Core §11.1 permission catalog,LOCKED
+inventory.receive,Receive transfer,Core §11.1 permission catalog,LOCKED
+inventory.reserve,Reserve stock,Core §11.1 permission catalog,LOCKED
+inventory.transfer,Transfer stock,Core §11.1 permission catalog,LOCKED
+inventory.view,View stock,Core §11.1 permission catalog,LOCKED
+invoice.approve,Approve invoices,Core §11.1 permission catalog,LOCKED
+invoice.cancel,Cancel/reverse invoices,Core §11.1 permission catalog,LOCKED
+invoice.create,Create invoices,Core §11.1 permission catalog,LOCKED
+invoice.post,Post invoices,Core §11.1 permission catalog,LOCKED
+invoice.send,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+invoice.submit,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+invoice.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+invoice.view,View customer invoices,Core §11.1 permission catalog,LOCKED
+journal.create,Create journals,Core §11.1 permission catalog,LOCKED
+journal.post,Post journals,Core §11.1 permission catalog,LOCKED
+landed_cost.manage,"Create, allocate and post landed costs",Appendix F.4 permission additions,LOCKED
+lead.create,Create leads,Core §11.1 permission catalog,LOCKED
+lead.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+lead.view,View leads,Core §11.1 permission catalog,LOCKED
+leave.approve,Approve leave,Core §11.1 permission catalog,LOCKED
+leave.cancel,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+leave.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+leave.submit,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+leave.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+maintenance.create,Create plans,Core §11.1 permission catalog,LOCKED
+maintenance.execute,Execute maintenance,Core §11.1 permission catalog,LOCKED
+maintenance.view,View maintenance,Core §11.1 permission catalog,LOCKED
+number_sequence.manage,Manage business number formats and reset rules,Appendix F.4 permission additions,LOCKED
+opportunity.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+opportunity.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+opportunity.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+organization.manage,Manage branches/departments,Core §11.1 permission catalog,LOCKED
+organization.view,View organization structure,Core §11.1 permission catalog,LOCKED
+payment.create,Record payments,Core §11.1 permission catalog,LOCKED
+payment.view,View payments,Core §11.1 permission catalog,LOCKED
+payroll.approve,Approve payroll,Core §11.1 permission catalog,LOCKED
+payroll.calculate,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+payroll.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+payroll.post,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+payroll.view,View payroll,Core §11.1 permission catalog,LOCKED
+product.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+product.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+product.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+project.approve,Approve project controls/BOM,Core §11.1 permission catalog,LOCKED
+project.create,Create projects,Core §11.1 permission catalog,LOCKED
+project.handover,Complete handover,Core §11.1 permission catalog,LOCKED
+project.update,Update projects,Core §11.1 permission catalog,LOCKED
+project.view,View projects,Core §11.1 permission catalog,LOCKED
+project.view_financials,View project costing,Core §11.1 permission catalog,LOCKED
+project_task.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+project_task.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+project_task.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+purchase_contract.manage,Manage purchase contracts and blanket POs,Appendix F.4 permission additions,LOCKED
+purchase_order.approve,Approve PO,Core §11.1 permission catalog,LOCKED
+purchase_order.cancel,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+purchase_order.create,Create PO,Core §11.1 permission catalog,LOCKED
+purchase_order.send,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+purchase_order.submit,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+purchase_order.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+purchase_request.approve,Approve PR,Core §11.1 permission catalog,LOCKED
+purchase_request.create,Create PR,Core §11.1 permission catalog,LOCKED
+purchase_request.submit,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+purchase_request.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+purchase_request.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+quotation.approve,Approve/accept quotations,Core §11.1 permission catalog,LOCKED
+quotation.create,Create quotations,Core §11.1 permission catalog,LOCKED
+quotation.send,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+quotation.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+quotation.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+report.export,Export reports,Core §11.1 permission catalog,LOCKED
+report.view,View reports,Core §11.1 permission catalog,LOCKED
+report_builder.manage,"Create custom reports, scheduled reports and dashboard widgets",Appendix F.4 permission additions,LOCKED
+rfq.close,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+rfq.create,Create RFQ,Core §11.1 permission catalog,LOCKED
+rfq.publish,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+rfq.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+rfq.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+saas.manage,"Manage tenant subscriptions, plans and platform billing",Appendix F.4 permission additions,LOCKED
+site_survey.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+site_survey.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+site_survey.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+stock_count.manage,Create and manage physical/cycle counts,Appendix F.4 permission additions,LOCKED
+stock_count.post,Approve/post stock count variances,Appendix F.4 permission additions,LOCKED
+supplier_invoice.approve,Approve AP invoices,Core §11.1 permission catalog,LOCKED
+supplier_invoice.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+supplier_invoice.match,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+supplier_invoice.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+supplier_invoice.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+supplier_quotation.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+supplier_quotation.select,Select supplier quotation,Core §11.1 permission catalog,LOCKED
+supplier_quotation.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+tax.manage,"Manage tax codes, tax rates and tax rules",Appendix F.4 permission additions,LOCKED
+technician.location.manage,View/manage technician visit location proof,Appendix F.4 permission additions,LOCKED
+ticket.assign,Assign tickets,Core §11.1 permission catalog,LOCKED
+ticket.close,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+ticket.create,Create tickets,Core §11.1 permission catalog,LOCKED
+ticket.resolve,Resolve tickets,Core §11.1 permission catalog,LOCKED
+ticket.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+ticket.view,View tickets,Core §11.1 permission catalog,LOCKED
+vendor.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+vendor.manage,Manage vendors,Core §11.1 permission catalog,LOCKED
+vendor.onboard,Create and submit vendor onboarding requests,Appendix F.4 permission additions,LOCKED
+vendor.risk.manage,"Assess vendor risk, blacklist vendors and approve vendor categories",Appendix F.4 permission additions,LOCKED
+vendor.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+vendor.view,View vendors,Core §11.1 permission catalog,LOCKED
+warehouse.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+warehouse.update,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+warehouse.view,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+workflow.manage,Configure approval workflows,Core §11.1 permission catalog,LOCKED
+workorder.accept,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+workorder.assign,Assign technicians,Core §11.1 permission catalog,LOCKED
+workorder.close,Close jobs,Core §11.1 permission catalog,LOCKED
+workorder.create,Purpose defined by endpoint catalog usage; not separately described in §11.1,Core §9 endpoint catalog,LOCKED_ENDPOINT_LITERAL
+workorder.update,Update field status,Core §11.1 permission catalog,LOCKED
+workorder.view,View work orders,Core §11.1 permission catalog,LOCKED
+integration.webhook.view,View integration webhook configuration and delivery evidence,Pass 17 document/event/communication completion,LOCKED
+integration.webhook.manage,Manage tenant integration webhooks and test deliveries,Pass 17 document/event/communication completion,LOCKED

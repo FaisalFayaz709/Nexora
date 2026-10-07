@@ -1,0 +1,88 @@
+{
+  "name": "Enterprise Controls & Platform",
+  "lockedRouteCount": 10,
+  "communicationRouteCount": 3,
+  "reportBuilderRouteCount": 4,
+  "featureRouteCount": 3,
+  "lockedRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/communications",
+      "permission": "communication.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/communications/send",
+      "permission": "communication.send"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/communications/:id/delivery",
+      "permission": "communication.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/report-templates",
+      "permission": "report_builder.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/saved-reports",
+      "permission": "report_builder.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/scheduled-reports",
+      "permission": "report_builder.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/report-executions/:id",
+      "permission": "report_builder.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/features",
+      "permission": "authenticated"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/organization-features",
+      "permission": "feature.manage"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/module-configurations/:id",
+      "permission": "feature.manage"
+    }
+  ],
+  "newPhysicalModelCount": 12,
+  "newPhysicalModels": [
+    "CommunicationTemplate",
+    "CommunicationLog",
+    "EmailDeliveryLog",
+    "SmsDeliveryLog",
+    "MessageAttachment",
+    "ReportTemplate",
+    "SavedReport",
+    "ScheduledReport",
+    "ReportExecution",
+    "DashboardWidget",
+    "UserDashboard",
+    "SavedView"
+  ],
+  "existingFeatureModels": [
+    "FeatureFlag",
+    "OrganizationFeature",
+    "ModuleConfiguration",
+    "SystemConfigurationHistory"
+  ],
+  "canonicalAreas": [
+    "Communication Log",
+    "Custom Report Builder",
+    "Scheduled Reports",
+    "Saved Views",
+    "Feature Flags & Module Configuration"
+  ],
+  "runtimeCertification": "PENDING_ENVIRONMENT"
+}

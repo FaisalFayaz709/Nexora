@@ -1,0 +1,105 @@
+{
+  "name": "HR",
+  "lockedRouteCount": 17,
+  "lockedRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/employees",
+      "permission": "employee.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/employees/:id",
+      "permission": "employee.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/employees",
+      "permission": "employee.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/employees/:id",
+      "permission": "employee.update"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/attendance",
+      "permission": "attendance.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/attendance/:id",
+      "permission": "attendance.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/leave-requests",
+      "permission": "leave.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/leave-requests/:id",
+      "permission": "leave.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/leave-requests",
+      "permission": "leave.create"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/leave-requests/:id/submit",
+      "permission": "leave.submit"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/leave-requests/:id/cancel",
+      "permission": "leave.cancel"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/payroll-runs",
+      "permission": "payroll.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/payroll-runs/:id",
+      "permission": "payroll.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payroll-runs",
+      "permission": "payroll.create"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payroll-runs/:id/calculate",
+      "permission": "payroll.calculate"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payroll-runs/:id/approve",
+      "permission": "payroll.approve"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payroll-runs/:id/post",
+      "permission": "payroll.post"
+    }
+  ],
+  "newPhysicalModelCount": 6,
+  "newPhysicalModels": [
+    "Attendance",
+    "LeaveType",
+    "LeaveBalance",
+    "LeaveRequest",
+    "PayrollRun",
+    "PayrollItem"
+  ],
+  "extendedModels": [
+    "Employee",
+    "ApprovalRequest"
+  ],
+  "runtimeCertification": "PENDING_ENVIRONMENT"
+}

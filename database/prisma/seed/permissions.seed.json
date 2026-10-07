@@ -1,0 +1,862 @@
+[
+  {
+    "key": "account.view",
+    "description": "View chart of accounts",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "approval.act",
+    "description": "Approve/reject/return",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "approval.view",
+    "description": "View approval inbox",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "asset.create",
+    "description": "Register assets",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "asset.install",
+    "description": "Install assets",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "asset.manage_qr",
+    "description": "Rotate/manage QR tokens",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "asset.replace",
+    "description": "Replace assets",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "asset.retire",
+    "description": "Retire assets",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "asset.rma",
+    "description": "Manage RMA",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "asset.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "asset.view",
+    "description": "View assets",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "attendance.manage",
+    "description": "Manage attendance",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "attendance.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "audit.view",
+    "description": "View audit logs",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "bank.manage",
+    "description": "Manage bank/cash accounts and reconciliation",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "branch.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "branch.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "branch.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "communication.send",
+    "description": "Send approved communications",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "communication.view",
+    "description": "View communication history",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "contract.activate",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "contract.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "contract.manage",
+    "description": "Manage contracts",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "contract.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "contract.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "customer.create",
+    "description": "Create customers",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "customer.update",
+    "description": "Update customers",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "customer.view",
+    "description": "View customers",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "customer_site.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "customer_site.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "customer_site.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "department.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "department.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "department.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "document.create",
+    "description": "Upload documents",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "document.delete",
+    "description": "Delete/archive documents",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "document.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "document.view",
+    "description": "View documents",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "employee.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "employee.manage",
+    "description": "Manage employee records",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "employee.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "employee.view",
+    "description": "View employees",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "expense.approve",
+    "description": "Approve expenses",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "expense.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "expense.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "expense.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "feature.manage",
+    "description": "Manage tenant feature flags and module configuration",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "finance.view",
+    "description": "View AR/AP reports",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "goods_receipt.create",
+    "description": "Receive goods",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "goods_receipt.inspect",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "goods_receipt.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "identity.role.manage",
+    "description": "Manage roles and permissions",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "identity.user.manage",
+    "description": "Create/update/suspend users",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "identity.user.view",
+    "description": "View tenant users",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "import.manage",
+    "description": "Validate, commit and rollback data imports",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "integration.webhook.manage",
+    "description": "Manage tenant integration webhooks and test deliveries",
+    "source": "Pass 17 document/event/communication completion"
+  },
+  {
+    "key": "integration.webhook.view",
+    "description": "View integration webhook configuration and delivery evidence",
+    "source": "Pass 17 document/event/communication completion"
+  },
+  {
+    "key": "inventory.adjust",
+    "description": "Create/post adjustments",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "inventory.receive",
+    "description": "Receive transfer",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "inventory.reserve",
+    "description": "Reserve stock",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "inventory.transfer",
+    "description": "Transfer stock",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "inventory.view",
+    "description": "View stock",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "invoice.approve",
+    "description": "Approve invoices",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "invoice.cancel",
+    "description": "Cancel/reverse invoices",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "invoice.create",
+    "description": "Create invoices",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "invoice.post",
+    "description": "Post invoices",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "invoice.send",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "invoice.submit",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "invoice.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "invoice.view",
+    "description": "View customer invoices",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "journal.create",
+    "description": "Create journals",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "journal.post",
+    "description": "Post journals",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "landed_cost.manage",
+    "description": "Create, allocate and post landed costs",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "lead.create",
+    "description": "Create leads",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "lead.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "lead.view",
+    "description": "View leads",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "leave.approve",
+    "description": "Approve leave",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "leave.cancel",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "leave.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "leave.submit",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "leave.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "maintenance.create",
+    "description": "Create plans",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "maintenance.execute",
+    "description": "Execute maintenance",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "maintenance.view",
+    "description": "View maintenance",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "number_sequence.manage",
+    "description": "Manage business number formats and reset rules",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "opportunity.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "opportunity.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "opportunity.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "organization.manage",
+    "description": "Manage branches/departments",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "organization.view",
+    "description": "View organization structure",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "payment.create",
+    "description": "Record payments",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "payment.view",
+    "description": "View payments",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "payroll.approve",
+    "description": "Approve payroll",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "payroll.calculate",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "payroll.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "payroll.post",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "payroll.view",
+    "description": "View payroll",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "product.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "product.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "product.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "project.approve",
+    "description": "Approve project controls/BOM",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "project.create",
+    "description": "Create projects",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "project.handover",
+    "description": "Complete handover",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "project.update",
+    "description": "Update projects",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "project.view",
+    "description": "View projects",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "project.view_financials",
+    "description": "View project costing",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "project_task.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "project_task.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "project_task.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "purchase_contract.manage",
+    "description": "Manage purchase contracts and blanket POs",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "purchase_order.approve",
+    "description": "Approve PO",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "purchase_order.cancel",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "purchase_order.create",
+    "description": "Create PO",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "purchase_order.send",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "purchase_order.submit",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "purchase_order.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "purchase_request.approve",
+    "description": "Approve PR",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "purchase_request.create",
+    "description": "Create PR",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "purchase_request.submit",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "purchase_request.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "purchase_request.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "quotation.approve",
+    "description": "Approve/accept quotations",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "quotation.create",
+    "description": "Create quotations",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "quotation.send",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "quotation.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "quotation.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "report.export",
+    "description": "Export reports",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "report.view",
+    "description": "View reports",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "report_builder.manage",
+    "description": "Create custom reports, scheduled reports and dashboard widgets",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "rfq.close",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "rfq.create",
+    "description": "Create RFQ",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "rfq.publish",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "rfq.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "rfq.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "saas.manage",
+    "description": "Manage tenant subscriptions, plans and platform billing",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "site_survey.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "site_survey.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "site_survey.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "stock_count.manage",
+    "description": "Create and manage physical/cycle counts",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "stock_count.post",
+    "description": "Approve/post stock count variances",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "supplier_invoice.approve",
+    "description": "Approve AP invoices",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "supplier_invoice.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "supplier_invoice.match",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "supplier_invoice.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "supplier_invoice.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "supplier_quotation.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "supplier_quotation.select",
+    "description": "Select supplier quotation",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "supplier_quotation.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "tax.manage",
+    "description": "Manage tax codes, tax rates and tax rules",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "technician.location.manage",
+    "description": "View/manage technician visit location proof",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "ticket.assign",
+    "description": "Assign tickets",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "ticket.close",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "ticket.create",
+    "description": "Create tickets",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "ticket.resolve",
+    "description": "Resolve tickets",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "ticket.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "ticket.view",
+    "description": "View tickets",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "vendor.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "vendor.manage",
+    "description": "Manage vendors",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "vendor.onboard",
+    "description": "Create and submit vendor onboarding requests",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "vendor.risk.manage",
+    "description": "Assess vendor risk, blacklist vendors and approve vendor categories",
+    "source": "Appendix F.4 permission additions"
+  },
+  {
+    "key": "vendor.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "vendor.view",
+    "description": "View vendors",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "warehouse.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "warehouse.update",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "warehouse.view",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "workflow.manage",
+    "description": "Configure approval workflows",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "workorder.accept",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "workorder.assign",
+    "description": "Assign technicians",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "workorder.close",
+    "description": "Close jobs",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "workorder.create",
+    "description": "Purpose defined by endpoint catalog usage; not separately described in \u00a711.1",
+    "source": "Core \u00a79 endpoint catalog"
+  },
+  {
+    "key": "workorder.update",
+    "description": "Update field status",
+    "source": "Core \u00a711.1 permission catalog"
+  },
+  {
+    "key": "workorder.view",
+    "description": "View work orders",
+    "source": "Core \u00a711.1 permission catalog"
+  }
+]

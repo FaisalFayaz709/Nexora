@@ -1,0 +1,139 @@
+{
+  "name": "Projects",
+  "lockedRouteCount": 18,
+  "lockedRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/projects",
+      "permission": "project.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/projects/:id",
+      "permission": "project.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/projects",
+      "permission": "project.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/projects/:id",
+      "permission": "project.update"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/project-tasks",
+      "permission": "project_task.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/project-tasks/:id",
+      "permission": "project_task.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/project-tasks",
+      "permission": "project_task.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/project-tasks/:id",
+      "permission": "project_task.update"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/projects/:id/bom",
+      "permission": "project.view"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/projects/:id/bom",
+      "permission": "project.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/projects/:id/bom/:bomId/approve",
+      "permission": "project.approve"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/projects/:id/budget",
+      "permission": "project.view"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/projects/:id/budget",
+      "permission": "project.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/projects/:id/budget/:budgetId/approve",
+      "permission": "project.approve"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/projects/:id/material-request",
+      "permission": "project.update"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/projects/:id/costing",
+      "permission": "project.view_financials"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/projects/:id/handover",
+      "permission": "project.handover"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/projects/:id/timeline",
+      "permission": "project.view"
+    }
+  ],
+  "newPhysicalModelCount": 14,
+  "newPhysicalModels": [
+    "Project",
+    "ProjectPhase",
+    "ProjectTask",
+    "ProjectTaskDependency",
+    "ProjectMilestone",
+    "ProjectMember",
+    "BillOfMaterials",
+    "BOMItem",
+    "ProjectBudget",
+    "ProjectBudgetLine",
+    "ProjectExpense",
+    "ProjectRisk",
+    "ProjectIssue",
+    "ProjectHandover"
+  ],
+  "resolvedDeferredForeignKeys": [
+    "MaterialRequirement.projectId -> Project",
+    "PurchaseRequest.projectId -> Project",
+    "StockReservation.projectId -> Project"
+  ],
+  "canonicalProjectStatuses": [
+    "DRAFT",
+    "PLANNED",
+    "ACTIVE",
+    "ON_HOLD",
+    "COMPLETED",
+    "HANDED_OVER",
+    "CANCELLED"
+  ],
+  "functionalTaskStatuses": [
+    "NOT_STARTED",
+    "IN_PROGRESS",
+    "BLOCKED",
+    "COMPLETED",
+    "CANCELLED"
+  ],
+  "sourceEvents": [
+    "project.created",
+    "project.handed_over"
+  ],
+  "runtimeCertification": "PENDING_ENVIRONMENT"
+}

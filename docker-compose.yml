@@ -1,0 +1,201 @@
+x-nexora-runtime-env: &nexora-runtime-env
+  NODE_ENV: development
+  API_PORT: "3001"
+  DATABASE_URL: postgresql://nexora:nexora@postgres:5432/nexora?schema=public
+  REDIS_URL: redis://redis:6379
+  WORKER_CONCURRENCY: "5"
+  WORKER_JOB_ATTEMPTS: "5"
+  WORKER_JOB_BACKOFF_MS: "5000"
+  WORKER_REMOVE_COMPLETE_AGE_SECONDS: "86400"
+  WORKER_REMOVE_FAILED_AGE_SECONDS: "604800"
+  WORKER_SCHEDULERS_ENABLED: "true"
+  WORKER_EMAIL_DELIVERY_ENABLED: "false"
+  WORKER_WEBHOOK_DELIVERY_ENABLED: "false"
+  MINIO_ENDPOINT: http://minio:9000
+  MINIO_ACCESS_KEY: nexora-local
+  MINIO_SECRET_KEY: change-me-local-only
+  MINIO_PRIVATE_BUCKET: nexora-private
+  MINIO_PUBLIC_BUCKET: nexora-public
+  MINIO_UPLOAD_URL_TTL_SECONDS: "900"
+  MINIO_DOWNLOAD_URL_TTL_SECONDS: "300"
+  DOCUMENT_MAX_UPLOAD_BYTES: "52428800"
+  DOCUMENT_ENFORCE_OBJECT_CHECKSUM: "true"
+  AUTH_ACCESS_TOKEN_SECRET: local-only-change-me-32-character-minimum-secret
+  AUTH_ACCESS_TOKEN_TTL_SECONDS: "900"
+  AUTH_SESSION_TTL_SECONDS: "2592000"
+  AUTH_MFA_CHALLENGE_TTL_SECONDS: "300"
+  AUTH_REFRESH_COOKIE_NAME: nexora_refresh
+  AUTH_BCRYPT_COST: "12"
+  AUTH_LOGIN_RATE_LIMIT: "5"
+  AUTH_LOGIN_RATE_WINDOW_SECONDS: "900"
+  AUTH_MFA_RATE_LIMIT: "10"
+  AUTH_MFA_RATE_WINDOW_SECONDS: "300"
+  AUTH_PASSWORD_MIN_LENGTH: "12"
+  AUTH_LOGIN_LOCKOUT_THRESHOLD: "5"
+  AUTH_LOGIN_LOCKOUT_SECONDS: "900"
+  AUTH_MFA_ENCRYPTION_KEY: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+  OPENAPI_DOCS_ENABLED: "false"
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: nexora
+      POSTGRES_USER: nexora
+      POSTGRES_PASSWORD: nexora
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nexora -d nexora"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 5s
+    networks: [nexora]
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 5s
+    networks: [nexora]
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ':9001'
+    environment:
+      MINIO_ROOT_USER: nexora-local
+      MINIO_ROOT_PASSWORD: change-me-local-only
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 5s
+    networks: [nexora]
+
+  minio-init:
+    image: minio/mc:latest
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: ["/bin/sh", "-c"]
+    command: >-
+      "mc alias set local http://minio:9000 nexora-local change-me-local-only &&
+       mc mb --ignore-existing local/nexora-private &&
+       mc mb --ignore-existing local/nexora-public"
+    networks: [nexora]
+    restart: "no"
+
+  migrator:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/backend.Dockerfile
+    environment:
+      <<: *nexora-runtime-env
+    command: ["sh", "-lc", "pnpm db:generate && pnpm db:migrate:deploy && pnpm db:migrate:status"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks: [nexora]
+    restart: "no"
+
+  api:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/backend.Dockerfile
+    environment:
+      <<: *nexora-runtime-env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio-init:
+        condition: service_completed_successfully
+      migrator:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/api/v1/health/ready').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 3s
+      retries: 12
+      start_period: 20s
+    networks: [nexora]
+
+  worker:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/worker.Dockerfile
+    environment:
+      <<: *nexora-runtime-env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio-init:
+        condition: service_completed_successfully
+      migrator:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "node", "-e", "import('ioredis').then(async ({default: Redis})=>{const r=new Redis(process.env.REDIS_URL,{maxRetriesPerRequest:1}); await r.ping(); r.disconnect(); process.exit(0);}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+    networks: [nexora]
+
+  web:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/frontend.Dockerfile
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: /api/v1
+      PORT: "3000"
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 3s
+      retries: 12
+      start_period: 20s
+    networks: [nexora]
+
+  nginx:
+    image: nginx:1.27-alpine
+    ports:
+      - "${NEXORA_HTTP_PORT:-8080}:80"
+    volumes:
+      - ./infrastructure/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      web:
+        condition: service_healthy
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1/healthz >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 3s
+      retries: 12
+      start_period: 5s
+    networks: [nexora]
+
+networks:
+  nexora:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis_data:
+  minio_data:

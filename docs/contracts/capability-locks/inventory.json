@@ -1,0 +1,94 @@
+{
+  "implementedRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/inventory/stock"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/inventory/ledger"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/inventory/serials/:serialNo"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/inventory/reservations"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/inventory/reservations/:id"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/inventory/transfers"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/inventory/transfers/:id/dispatch"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/inventory/transfers/:id/receive"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/inventory/adjustments"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/inventory/adjustments/:id/post"
+    }
+  ],
+  "routeCount": 10,
+  "newPhysicalModels": [
+    "StockBalance",
+    "StockTransaction",
+    "StockTransactionSerial",
+    "StockTransactionBatch",
+    "StockReservation",
+    "StockTransfer",
+    "StockTransferItem",
+    "StockTransferItemSerial",
+    "StockTransferItemBatch",
+    "SerialNumber",
+    "BatchLot",
+    "StockAdjustment",
+    "StockAdjustmentLine"
+  ],
+  "newPhysicalModelCount": 13,
+  "lockedStockTransactionTypes": [
+    "PURCHASE_RECEIPT",
+    "STOCK_TRANSFER",
+    "PROJECT_ISSUE",
+    "PROJECT_RETURN",
+    "TECHNICIAN_ISSUE",
+    "TECHNICIAN_RETURN",
+    "SALES_ISSUE",
+    "DAMAGED",
+    "ADJUSTMENT",
+    "CUSTOMER_INSTALLATION"
+  ],
+  "derivedStates": {
+    "StockTransfer": [
+      "DRAFT",
+      "IN_TRANSIT",
+      "RECEIVED"
+    ],
+    "StockReservation": [
+      "ACTIVE",
+      "RELEASED",
+      "CONSUMED"
+    ],
+    "StockAdjustment": [
+      "DRAFT",
+      "POSTED"
+    ],
+    "SerialNumber": [
+      "AVAILABLE",
+      "IN_TRANSIT",
+      "REMOVED"
+    ]
+  }
+}

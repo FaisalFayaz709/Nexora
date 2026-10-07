@@ -1,0 +1,2250 @@
+[
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/approvals/inbox",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/approvals/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/approvals/:id/approve",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/approvals/:id/reject",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/approvals/:id/return",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/approval-definitions",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/approval-definitions",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/workflow-rules",
+    "maturity": "PASS_16_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Workflow/control-rule route has shared Zod contract and source-level service/repository/audit implementation; runtime proof remains pending."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/workflow-rules/:id",
+    "maturity": "PASS_16_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Workflow/control-rule route has shared Zod contract and source-level service/repository/audit implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/workflow-rules",
+    "maturity": "PASS_16_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Workflow/control-rule route has shared Zod contract and source-level service/repository/audit implementation; runtime proof remains pending."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/workflow-rules/:id",
+    "maturity": "PASS_16_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Workflow/control-rule route has shared Zod contract and source-level service/repository/audit implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/workflow-rules/:id/activate",
+    "maturity": "PASS_16_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Workflow/control-rule route has shared Zod contract and source-level service/repository/audit implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/workflow-rules/:id/deactivate",
+    "maturity": "PASS_16_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Workflow/control-rule route has shared Zod contract and source-level service/repository/audit implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/workflow-rules/evaluate",
+    "maturity": "PASS_16_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Workflow/control-rule route has shared Zod contract and source-level service/repository/audit implementation; runtime proof remains pending."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/assets",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/assets/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/assets",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/assets/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/assets/register-from-stock",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/assets/:id/install",
+    "maturity": "SOURCE_EXAMPLE_BASELINE",
+    "note": "Request/response example printed in \u00a710."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/assets/:id/replace",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/assets/:id/retire",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/assets/:id/history",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/assets/:id/qr/rotate",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/asset-qr/:token",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/assets/:id/rma",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/audit-logs",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/audit-logs/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/leads",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/leads/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/leads",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/leads/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/opportunities",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/opportunities/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/opportunities",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/opportunities/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/site-surveys",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/site-surveys/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/site-surveys",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/site-surveys/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/quotations",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/quotations/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/quotations",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/quotations/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/contracts",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/contracts/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/contracts",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/contracts/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/leads/:id/qualify",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/quotations/:id/send",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/quotations/:id/accept",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/contracts/:id/activate",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/customers",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/customers/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/customers",
+    "maturity": "EXPLICIT_SHARED_ZOD_SCHEMA",
+    "note": "Request schema explicitly printed in \u00a710."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/customers/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/customer-sites",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/customer-sites/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/customer-sites",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/customer-sites/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/customers/:id/timeline",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/customer-sites/:id/assets",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/documents",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/documents/:id",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/documents",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "DELETE",
+    "endpoint": "/api/v1/documents/:id",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/documents/upload-intent",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/documents/complete-upload",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/documents/:id/download-url",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/documents/:id/versions",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/customer-invoices",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/customer-invoices/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/customer-invoices",
+    "maturity": "SOURCE_EXAMPLE_BASELINE",
+    "note": "Request/response example printed in \u00a710."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/customer-invoices/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/supplier-invoices",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/supplier-invoices/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/supplier-invoices",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/supplier-invoices/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/expenses",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/expenses/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/expenses",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/expenses/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/customer-invoices/:id/submit",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/customer-invoices/:id/approve",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/customer-invoices/:id/post",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/customer-invoices/:id/send",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/customer-invoices/:id/cancel",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/supplier-invoices/:id/match",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/supplier-invoices/:id/approve",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/payments",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/payments",
+    "maturity": "SOURCE_EXAMPLE_BASELINE",
+    "note": "Request/response example printed in \u00a710."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/accounts",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/journal-entries",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/journal-entries/:id/post",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/finance/receivables",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/finance/payables",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/employees",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/employees/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/employees",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/employees/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/attendance",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/attendance/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/leave-requests",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/leave-requests/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/leave-requests",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/payroll-runs",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/payroll-runs/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/payroll-runs",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/leave-requests/:id/submit",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/leave-requests/:id/cancel",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/payroll-runs/:id/calculate",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/payroll-runs/:id/approve",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/payroll-runs/:id/post",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/auth/login",
+    "maturity": "SOURCE_EXAMPLE_BASELINE",
+    "note": "Request/response example printed in \u00a710."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/auth/mfa/verify",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/auth/refresh",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/auth/logout",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/auth/logout-all",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/auth/me",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/auth/sessions",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "DELETE",
+    "endpoint": "/api/v1/auth/sessions/:sessionId",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/users",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "PASS 03 adds locked identity/administration endpoint coverage with shared Zod contracts and tenant-scoped Fastify service enforcement."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/users/:id",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "PASS 03 adds locked identity/administration endpoint coverage with shared Zod contracts and tenant-scoped Fastify service enforcement."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/users",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "PASS 03 adds locked identity/administration endpoint coverage with shared Zod contracts and tenant-scoped Fastify service enforcement."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/users/:id",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "PASS 03 adds locked identity/administration endpoint coverage with shared Zod contracts and tenant-scoped Fastify service enforcement."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/roles",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "PASS 03 adds locked identity/administration endpoint coverage with shared Zod contracts and tenant-scoped Fastify service enforcement."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/roles",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "PASS 03 adds locked identity/administration endpoint coverage with shared Zod contracts and tenant-scoped Fastify service enforcement."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/roles/:id",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "PASS 03 adds locked identity/administration endpoint coverage with shared Zod contracts and tenant-scoped Fastify service enforcement."
+  },
+  {
+    "method": "PUT",
+    "endpoint": "/api/v1/roles/:id/permissions",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "PASS 03 adds locked identity/administration endpoint coverage with shared Zod contracts and tenant-scoped Fastify service enforcement."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/users/roles",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "PASS 03 adds locked identity/administration endpoint coverage with shared Zod contracts and tenant-scoped Fastify service enforcement."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/permissions",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "PASS 03 adds locked identity/administration endpoint coverage with shared Zod contracts and tenant-scoped Fastify service enforcement."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/products",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/products/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/products",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/products/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/warehouses",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/warehouses/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/warehouses",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/warehouses/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/inventory/stock",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/inventory/ledger",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/inventory/serials/:serialNo",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/inventory/reservations",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "DELETE",
+    "endpoint": "/api/v1/inventory/reservations/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/inventory/transfers",
+    "maturity": "SOURCE_EXAMPLE_BASELINE",
+    "note": "Request/response example printed in \u00a710."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/inventory/transfers/:id/dispatch",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/inventory/transfers/:id/receive",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/inventory/adjustments",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/inventory/adjustments/:id/post",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/maintenance/plans",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/maintenance/plans",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/maintenance/schedule",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/maintenance/schedules/:id/generate-work-order",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/maintenance/executions/:id/complete",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/notifications",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/notifications/:id/read",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/notifications/read-all",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/branches",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/branches/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/branches",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/branches/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/departments",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/departments/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/departments",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/departments/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/search",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/calendar",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/health/ready",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/health/live",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/purchase-requests",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/purchase-requests",
+    "maturity": "SOURCE_EXAMPLE_BASELINE",
+    "note": "Request/response example printed in \u00a710."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/purchase-requests/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/purchase-requests/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/purchase-requests/:id/submit",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/purchase-requests/:id/approve",
+    "maturity": "SOURCE_EXAMPLE_BASELINE",
+    "note": "Request/response example printed in \u00a710."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/purchase-requests/:id/reject",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/purchase-requests/:id/create-rfq",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/rfqs",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/rfqs",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/rfqs/:id/invite-vendors",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/rfqs/:id/publish",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/rfqs/:id/close",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/rfqs/:id/comparison",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/supplier-quotations",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/supplier-quotations/:id/select",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/purchase-orders",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/purchase-orders",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/purchase-orders/:id/submit",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/purchase-orders/:id/approve",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/purchase-orders/:id/send",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/purchase-orders/:id/cancel",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/goods-receipts",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/goods-receipts",
+    "maturity": "SOURCE_EXAMPLE_BASELINE",
+    "note": "Request/response example printed in \u00a710."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/goods-receipts/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/goods-receipts/:id/inspect",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/projects",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/projects/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/projects",
+    "maturity": "SOURCE_EXAMPLE_BASELINE",
+    "note": "Request/response example printed in \u00a710."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/projects/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/project-tasks",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/project-tasks/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/project-tasks",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/project-tasks/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/projects/:id/bom",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PUT",
+    "endpoint": "/api/v1/projects/:id/bom",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/projects/:id/bom/:bomId/approve",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/projects/:id/budget",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PUT",
+    "endpoint": "/api/v1/projects/:id/budget",
+    "maturity": "ROUTE_AND_SHARED_SCHEMA",
+    "note": "Project budget draft save uses UpsertProjectBudgetSchema and Fastify project service transaction/audit."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/projects/:id/budget/:budgetId/approve",
+    "maturity": "COMMAND_SCHEMA_AND_TRANSACTION_POLICY",
+    "note": "Budget approval is an explicit command that supersedes prior approved versions and writes audit evidence."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/projects/:id/material-request",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/projects/:id/costing",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/projects/:id/handover",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/projects/:id/timeline",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/reports",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/reports/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/reports/exports",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/reports/exports/:jobId",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/tickets",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/tickets/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/tickets",
+    "maturity": "SOURCE_EXAMPLE_BASELINE",
+    "note": "Request/response example printed in \u00a710."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/tickets/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/work-orders",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/work-orders/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/work-orders",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/work-orders/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/tickets/:id/assign",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/tickets/:id/resolve",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/tickets/:id/close",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/work-orders/:id/assign",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/work-orders/:id/accept",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/work-orders/:id/start-travel",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/work-orders/:id/arrive",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/work-orders/:id/start",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/work-orders/:id/complete",
+    "maturity": "SOURCE_EXAMPLE_BASELINE",
+    "note": "Request/response example printed in \u00a710."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/work-orders/:id/service-report",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/vendors",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/vendors/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/vendors",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/vendors/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/vendors/:id/performance",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/vendors/:id/purchase-orders",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/number-sequences",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/number-sequences",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/number-sequences/:id/reset",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/vendor-onboarding/requests",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/vendor-onboarding/:id/submit",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/vendor-onboarding/:id/approve",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/vendors/:id/blacklist",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/stock-counts",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "Pass 08 added this stock-count read surface with shared stock-count contracts and tenant/branch-scoped backend service validation."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/stock-counts/:id",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "Pass 08 added this stock-count read surface with shared stock-count contracts and tenant/branch-scoped backend service validation."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/stock-counts/:id/count-sheet",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "Pass 08 added this stock-count read surface with shared stock-count contracts and tenant/branch-scoped backend service validation."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/stock-counts",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/stock-counts/:id/start",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/stock-counts/:id/submit",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/stock-counts/:id/post",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/landed-costs",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/landed-costs/:id/allocate",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/landed-costs/:id/post",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/tax-codes",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/tax-rules",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/tax/calculate",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/tax/reports",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/bank-accounts",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/bank-statements/import",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/bank-reconciliations/:id/close",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/vouchers/payment",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/vouchers/receipt",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Pass 15 adds implementation-derived receipt voucher contract; field schema lives in shared commercial-finance contracts."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/purchase-contracts",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/purchase-contracts/:id/approve",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/purchase-contracts/:id/create-release-order",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/imports/upload",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/imports/:id/validate",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/imports/:id/commit",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/imports/:id/rollback",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/communications",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/communications/send",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/communications/:id/delivery",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/work-orders/:id/check-in",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/work-orders/:id/location",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/work-orders/:id/check-out",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/report-templates",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/saved-reports",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/scheduled-reports",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/report-executions/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/features",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/organization-features",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/module-configurations/:id",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/saas/plans",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/saas/subscriptions",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/saas/usage",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/saas/invoices/:id/post",
+    "maturity": "ROUTE_SIGNATURE_ONLY",
+    "note": "Method/path/purpose/permission/notes are printed; complete field-level payload schema is not printed."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/technician/offline-sync",
+    "maturity": "ROUTE_SIGNATURE_AND_SHARED_ZOD_CONTRACT",
+    "note": "Appendix G.11 prints the endpoint purpose and payload example. Shared Zod batch/command schemas and backend service validation enforce scope, idempotency and conflict handling."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/integration-webhooks",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/integration-webhooks/:id",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/integration-webhooks",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/integration-webhooks/:id",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/integration-webhooks/:id/activate",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/integration-webhooks/:id/deactivate",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/integration-webhook-deliveries",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/integration-webhooks/:id/test-delivery",
+    "maturity": "PASS_17_SOURCE_LEVEL_CONTRACT_LOCKED",
+    "note": "Pass 17 route has shared Zod contract and source-level service/repository/audit/event delivery implementation; runtime proof remains pending."
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/report-templates",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/report-templates/:id",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/report-templates/:id",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/saved-reports",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/saved-reports/:id",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/saved-reports/:id",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/scheduled-reports",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/scheduled-reports/:id",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/scheduled-reports/:id",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/report-executions",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/dashboards/widgets",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/dashboards/widgets",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/saved-views",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/saved-views/:id",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/saved-views",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/saved-views/:id",
+    "maturity": "PASS_19_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "REPORTING_VISIBILITY",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/customer/dashboard",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/customer/projects",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/customer/contracts",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/customer/sites",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/customer/assets",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/customer/tickets",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/customer/invoices",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/customer/payments",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/customer/documents",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/customer/tickets",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/customer/work-orders/:id/confirm",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/vendor/dashboard",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/vendor/rfqs",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/vendor/quotations",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/vendor/purchase-orders",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/vendor/deliveries",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/vendor/invoices",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/vendor/payments",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/vendor/performance",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/vendor/documents",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/vendor/quotations",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/vendor/purchase-orders/:id/acknowledge",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/vendor/invoices",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/technician/dashboard",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/technician/jobs",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/technician/work-orders/:id",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/portal/technician/offline-queue",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/technician/work-orders/:id/accept",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/technician/work-orders/:id/start-travel",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/technician/work-orders/:id/arrive",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/technician/work-orders/:id/check-in",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/technician/work-orders/:id/location",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/technician/work-orders/:id/start",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/technician/work-orders/:id/service-report",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/technician/work-orders/:id/check-out",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/portal/technician/work-orders/:id/complete",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/saas/plans",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/saas/plans/:id",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/saas/plans/:id",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/saas/subscriptions",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/saas/subscriptions/:id",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/saas/subscriptions/:id",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/saas/usage/:id",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/saas/usage/collect",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/saas/invoices",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/v1/saas/invoices",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/v1/saas/invoices/:id",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/api/v1/saas/invoices/:id",
+    "maturity": "PASS_20_SOURCE_LEVEL_RUNTIME_PENDING",
+    "contract": "PORTALS_AND_SAAS_READINESS",
+    "tests": "SOURCE_GATE_ONLY"
+  }
+]

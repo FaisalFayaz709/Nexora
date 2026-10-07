@@ -1,0 +1,108 @@
+{
+  "name": "Assets",
+  "lockedRouteCount": 13,
+  "lockedRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/assets",
+      "permission": "asset.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/:id",
+      "permission": "asset.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/assets",
+      "permission": "asset.create"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/assets/:id",
+      "permission": "asset.update"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/assets/register-from-stock",
+      "permission": "asset.create"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/assets/:id/install",
+      "permission": "asset.install"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/assets/:id/replace",
+      "permission": "asset.replace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/assets/:id/retire",
+      "permission": "asset.retire"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assets/:id/history",
+      "permission": "asset.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/assets/:id/qr/rotate",
+      "permission": "asset.manage_qr"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/asset-qr/:token",
+      "permission": "Authenticated/portal"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/assets/:id/rma",
+      "permission": "asset.rma"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/customer-sites/:id/assets",
+      "permission": "asset.view"
+    }
+  ],
+  "assetCatalogRouteCount": 12,
+  "relatedCustomerSiteAssetRouteCount": 1,
+  "newPhysicalModelCount": 6,
+  "newPhysicalModels": [
+    "Asset",
+    "AssetInstallation",
+    "AssetHistory",
+    "AssetWarranty",
+    "AssetQrTag",
+    "AssetRMA"
+  ],
+  "canonicalAssetStatuses": [
+    "PROCURED",
+    "IN_WAREHOUSE",
+    "ALLOCATED",
+    "ISSUED",
+    "INSTALLED",
+    "ACTIVE",
+    "UNDER_MAINTENANCE",
+    "REPAIRED",
+    "REPLACED",
+    "RETIRED"
+  ],
+  "warrantyStatuses": [
+    "ACTIVE",
+    "EXPIRING",
+    "EXPIRED",
+    "VOID"
+  ],
+  "sourceEvents": [
+    "asset.installed",
+    "asset.warranty.expiring"
+  ],
+  "resolvedDeferredForeignKeys": [
+    "SerialNumber.assetId -> Asset"
+  ],
+  "runtimeCertification": "PENDING_ENVIRONMENT"
+}

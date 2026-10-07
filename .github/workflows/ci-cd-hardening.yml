@@ -1,0 +1,271 @@
+name: R20 CI/CD Hardened Gate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+  checks: write
+
+concurrency:
+  group: r20-ci-cd-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  source-architecture-gates:
+    name: Source architecture gates R0-R20
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: R0 latest blueprint source-of-truth gate
+        run: pnpm pass:r0:source-check || node scripts/check-pass-r0-source-of-truth-rebase.mjs
+      - name: R1 lockfile policy source gate
+        run: node scripts/check-pass-r1-dependency-lockfile-repair.mjs --source-only
+      - name: R2 frontend foundation source gate
+        run: node scripts/check-pass-r2-frontend-foundation.mjs --source-only
+      - name: R3 route-group shell source gate
+        run: node scripts/check-pass-r3-route-group-shell-compliance.mjs --source-only
+      - name: R4 central API/query source gate
+        run: node scripts/check-pass-r4-central-api-query-system.mjs --source-only
+      - name: R5 backend offline-sync source gate
+        run: node scripts/check-pass-r5-backend-offline-sync-route.mjs --source-only
+      - name: R6 screen contracts source gate
+        run: node scripts/check-pass-r6-screen-contracts.mjs --source-only
+      - name: R7 TanStack grids source gate
+        run: node scripts/check-pass-r7-tanstack-grids.mjs --source-only
+      - name: R8 RHF/Zod forms source gate
+        run: node scripts/check-pass-r8-rhf-zod-forms.mjs --source-only
+      - name: R9 identity organization RBAC frontend source gate
+        run: node scripts/check-pass-r9-identity-organization-rbac-frontend.mjs --source-only
+      - name: R10 business masters frontend source gate
+        run: node scripts/check-pass-r10-business-masters-frontend.mjs --source-only
+      - name: R11 inventory frontend source gate
+        run: node scripts/check-pass-r11-inventory-frontend.mjs --source-only
+      - name: R12 procurement frontend source gate
+        run: node scripts/check-pass-r12-procurement-frontend.mjs --source-only
+      - name: R13 projects/assets frontend source gate
+        run: node scripts/check-pass-r13-projects-assets-frontend.mjs --source-only
+      - name: R14 service maintenance technician PWA frontend source gate
+        run: node scripts/check-pass-r14-service-maintenance-technician-pwa-frontend.mjs --source-only
+      - name: R15 finance frontend source gate
+        run: node scripts/check-pass-r15-finance-frontend.mjs --source-only
+      - name: R16 platform portals reports source gate
+        run: node scripts/check-pass-r16-platform-portals-reports.mjs --source-only
+      - name: R17 backend boundary transaction source gate
+        run: node scripts/check-pass-r17-backend-boundary-transaction-audit.mjs --source-only
+      - name: R18 test completion source gate
+        run: node scripts/check-pass-r18-test-completion.mjs --source-only
+      - name: R19 docker runtime certification source gate
+        run: node scripts/check-pass-r19-docker-runtime-certification.mjs --source-only
+      - name: R20 CI/CD hardening source gate
+        run: node scripts/check-pass-r20-cicd-hardening.mjs --source-only
+      - name: R21 final blueprint compliance audit source gate
+        run: node scripts/check-pass-r21-final-blueprint-compliance-audit.mjs --source-only
+
+  install-quality-test-build:
+    name: Frozen install, quality, tests, build
+    runs-on: ubuntu-latest
+    needs: source-architecture-gates
+    timeout-minutes: 60
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: nexora
+          POSTGRES_PASSWORD: nexora
+          POSTGRES_DB: nexora
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U nexora -d nexora"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+      redis:
+        image: redis:7-alpine
+        ports: ['6379:6379']
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql://nexora:nexora@localhost:5432/nexora?schema=public
+      REDIS_URL: redis://localhost:6379
+      AUTH_ACCESS_TOKEN_SECRET: test-only-access-token-secret-at-least-32-characters
+      AUTH_MFA_ENCRYPTION_KEY: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+      RUN_INTEGRATION_TESTS: '1'
+      CI: 'true'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Lockfile policy
+        run: node scripts/check-lockfile-policy.mjs
+      - name: Frozen pnpm install
+        run: pnpm install --frozen-lockfile
+      - name: Static blueprint verification
+        run: pnpm verify:static
+      - name: Prettier check
+        run: pnpm format:check
+      - name: ESLint
+        run: pnpm lint
+      - name: TypeScript typecheck
+        run: pnpm typecheck
+      - name: Prisma schema validation
+        run: pnpm db:validate
+      - name: Prisma client generation
+        run: pnpm db:generate
+      - name: Migration safety/status check
+        run: pnpm db:migrate:status
+      - name: Unit, repository and API integration tests
+        run: pnpm test
+      - name: Production build
+        run: pnpm build
+      - name: Upload test/build evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r20-quality-test-build-evidence
+          path: certification-output
+          if-no-files-found: ignore
+
+  frontend-appendix-g-gates:
+    name: Appendix G frontend gates
+    runs-on: ubuntu-latest
+    needs: source-architecture-gates
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: No raw fetch outside central API client
+        run: node scripts/check-pass-r4-central-api-query-system.mjs --source-only
+      - name: No manual AppShell imports in pages
+        run: node scripts/check-pass-r3-route-group-shell-compliance.mjs --source-only
+      - name: Screen contracts cover all pages
+        run: node scripts/check-pass-r6-screen-contracts.mjs --source-only
+      - name: TanStack Table grids gate
+        run: node scripts/check-pass-r7-tanstack-grids.mjs --source-only
+      - name: React Hook Form plus Zod forms gate
+        run: node scripts/check-pass-r8-rhf-zod-forms.mjs --source-only
+      - name: Frontend route coverage gate
+        run: node scripts/check-route-coverage.mjs
+
+  backend-boundary-security-gates:
+    name: Backend boundaries and security gates
+    runs-on: ubuntu-latest
+    needs: source-architecture-gates
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Frozen pnpm install for security audit
+        run: pnpm install --frozen-lockfile
+      - name: Dependency security audit
+        run: pnpm audit --audit-level high
+      - name: Backend boundary and transaction audit
+        run: node scripts/check-pass-r17-backend-boundary-transaction-audit.mjs --source-only
+      - name: Security hardening source check
+        run: pnpm security:check
+      - name: Backend route coverage
+        run: node scripts/check-route-coverage.mjs
+
+  docker-build-and-smoke:
+    name: Docker build and smoke
+    runs-on: ubuntu-latest
+    needs: install-quality-test-build
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install for compose support scripts
+        run: pnpm install --frozen-lockfile
+      - name: Docker Compose config
+        run: docker compose config
+      - name: Docker build web/api/worker
+        run: docker compose build web api worker
+      - name: Docker runtime certification source gate
+        run: node scripts/check-pass-r19-docker-runtime-certification.mjs --source-only
+
+  e2e-smoke-source-and-optional-runtime:
+    name: E2E smoke source gate
+    runs-on: ubuntu-latest
+    needs: install-quality-test-build
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install reproducibly
+        run: pnpm install --frozen-lockfile
+      - name: Full workflow E2E source gate
+        run: pnpm full-workflow:e2e:check
+      - name: R18 test completion source gate
+        run: pnpm test:completion:check
+      - name: Browser E2E smoke
+        run: pnpm test:e2e:browser
+
+  r20-gate-summary:
+    name: R20 gate summary
+    runs-on: ubuntu-latest
+    needs:
+      - source-architecture-gates
+      - install-quality-test-build
+      - frontend-appendix-g-gates
+      - backend-boundary-security-gates
+      - docker-build-and-smoke
+      - e2e-smoke-source-and-optional-runtime
+    if: always()
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Final R20 source gate
+        run: node scripts/check-pass-r20-cicd-hardening.mjs --source-only
+      - name: Fail if any required job failed
+        run: |
+          if [[ "${{ needs.source-architecture-gates.result }}" != "success" ]]; then exit 1; fi
+          if [[ "${{ needs.install-quality-test-build.result }}" != "success" ]]; then exit 1; fi
+          if [[ "${{ needs.frontend-appendix-g-gates.result }}" != "success" ]]; then exit 1; fi
+          if [[ "${{ needs.backend-boundary-security-gates.result }}" != "success" ]]; then exit 1; fi
+          if [[ "${{ needs.docker-build-and-smoke.result }}" != "success" ]]; then exit 1; fi
+          if [[ "${{ needs.e2e-smoke-source-and-optional-runtime.result }}" != "success" ]]; then exit 1; fi
+          echo "R20 CI/CD hardened gate passed."

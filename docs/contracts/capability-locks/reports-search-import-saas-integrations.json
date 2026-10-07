@@ -1,0 +1,174 @@
+{
+  "name": "Reports, Search, Import, SaaS & Integrations",
+  "lockedRouteCount": 28,
+  "lockedRoutes": [
+    {
+      "method": "GET",
+      "path": "/api/v1/search",
+      "permission": "Authenticated"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/calendar",
+      "permission": "Authenticated"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/audit-logs",
+      "permission": "audit.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/audit-logs/:id",
+      "permission": "audit.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports",
+      "permission": "report.view"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports/:id",
+      "permission": "report.view"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/reports/exports",
+      "permission": "report.export"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports/exports/:jobId",
+      "permission": "report.export"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/imports/upload",
+      "permission": "import.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/imports/:id/validate",
+      "permission": "import.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/imports/:id/commit",
+      "permission": "import.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/imports/:id/rollback",
+      "permission": "import.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/saas/plans",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/saas/subscriptions",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/saas/usage",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/saas/invoices/:id/post",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/saas/plans",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/saas/plans/:id",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/saas/plans/:id",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/saas/subscriptions",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/saas/subscriptions/:id",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/saas/subscriptions/:id",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/saas/usage/:id",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/saas/usage/collect",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/saas/invoices",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/saas/invoices",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/saas/invoices/:id",
+      "permission": "saas.manage"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/saas/invoices/:id",
+      "permission": "saas.manage"
+    }
+  ],
+  "newPhysicalModelCount": 15,
+  "newPhysicalModels": [
+    "ImportMapping",
+    "ImportBatch",
+    "ImportRow",
+    "ImportRowError",
+    "DuplicateCheckRule",
+    "SaaSSubscriptionFeature",
+    "SaaSInvoice",
+    "TenantUsageMetric",
+    "TenantStorageUsage",
+    "SearchIndexEntry",
+    "CalendarFeedItem",
+    "IntegrationConnection",
+    "IntegrationWebhook",
+    "IntegrationWebhookDelivery",
+    "IntegrationSyncLog"
+  ],
+  "reusedModels": [
+    "AuditLog",
+    "ImportTemplate",
+    "SaaSPlan",
+    "SaaSSubscription",
+    "ReportExecution",
+    "SavedReport",
+    "ScheduledReport"
+  ],
+  "runtimeCertification": "PENDING_ENVIRONMENT_PASS_20_EXTENDED_SAAS"
+}

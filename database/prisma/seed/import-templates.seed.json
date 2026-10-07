@@ -1,0 +1,8 @@
+[
+  { "subjectType": "EMPLOYEE", "name": "Employee Master", "columns": ["employeeNo", "name", "branchId", "departmentId", "userId", "managerId", "jobTitle", "joiningDate", "employmentType", "status"] },
+  { "subjectType": "CUSTOMER", "name": "Customer Master", "columns": ["code", "name", "taxNo", "creditLimit", "status"] },
+  { "subjectType": "VENDOR", "name": "Vendor Master", "columns": ["code", "name", "taxNo", "paymentTerms", "status"] },
+  { "subjectType": "PRODUCT", "name": "Product Master", "columns": ["sku", "name", "categoryId", "unitId", "trackingType", "brand", "model", "barcode", "standardCost", "salesPrice", "minStock", "maxStock"] },
+  { "subjectType": "WAREHOUSE", "name": "Warehouse Master", "columns": ["branchId", "code", "name", "status"] },
+  { "subjectType": "INVENTORY", "name": "Opening Stock", "columns": ["warehouseId", "locationId", "productId", "onHand", "reserved"] }
+]

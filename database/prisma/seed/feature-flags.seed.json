@@ -1,0 +1,17 @@
+[
+  {"key":"platform.number-sequence","moduleKey":"organization","name":"Number Sequence Management","defaultEnabled":true},
+  {"key":"platform.import-wizard","moduleKey":"imports","name":"Data Import Wizard","defaultEnabled":true},
+  {"key":"vendor.onboarding","moduleKey":"vendors","name":"Vendor Onboarding","defaultEnabled":true},
+  {"key":"vendor.risk","moduleKey":"vendors","name":"Vendor Risk Controls","defaultEnabled":true},
+  {"key":"inventory.stock-count","moduleKey":"inventory","name":"Physical Stock Count","defaultEnabled":true},
+  {"key":"inventory.landed-cost","moduleKey":"inventory","name":"Landed Cost and Valuation","defaultEnabled":true},
+  {"key":"finance.tax-engine","moduleKey":"finance","name":"Tax Engine","defaultEnabled":true},
+  {"key":"finance.bank-cash","moduleKey":"finance","name":"Bank and Cash Management","defaultEnabled":true},
+  {"key":"procurement.purchase-contracts","moduleKey":"procurement","name":"Purchase Contracts and Blanket POs","defaultEnabled":true},
+  {"key":"platform.communication-log","moduleKey":"notifications","name":"Communication Log","defaultEnabled":true},
+  {"key":"service.technician-gps","moduleKey":"service","name":"Technician Visit Verification","defaultEnabled":false},
+  {"key":"reports.custom-builder","moduleKey":"reports","name":"Custom Report Builder","defaultEnabled":true},
+  {"key":"platform.module-configuration","moduleKey":"organization","name":"Feature Flags and Module Configuration","defaultEnabled":true},
+  {"key":"platform.saas-billing","moduleKey":"platform","name":"SaaS Subscription and Tenant Billing","defaultEnabled":false},
+  {"key":"technician.offline-sync","moduleKey":"portals","name":"Technician Offline Sync","defaultEnabled":true}
+]

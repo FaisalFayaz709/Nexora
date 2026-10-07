@@ -1,0 +1,16 @@
+# Release-candidate overlay. Use with the base docker-compose.yml after production secrets are injected.
+services:
+  api:
+    environment:
+      NODE_ENV: production
+      OPENAPI_DOCS_ENABLED: "false"
+  worker:
+    environment:
+      NODE_ENV: production
+      WORKER_SCHEDULERS_ENABLED: "true"
+  web:
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: /api/v1
+  nginx:
+    volumes:
+      - ./infrastructure/nginx/nginx.production.conf:/etc/nginx/nginx.conf:ro

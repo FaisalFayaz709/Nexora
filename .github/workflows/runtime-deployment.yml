@@ -1,0 +1,40 @@
+name: PASS 23 Runtime Deployment Certification
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+
+env:
+  NEXORA_HTTP_PORT: "8080"
+
+jobs:
+  pass-23-runtime-deployment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: PASS 23 source gate
+        run: node scripts/check-pass-23-runtime-deployment-certification.mjs --source-only
+      - name: Frozen install
+        run: pnpm install --frozen-lockfile
+      - name: PASS 23 runtime deployment certification
+        run: bash scripts/pass-23-runtime-deployment-certification-certify.sh
+      - name: Upload PASS 23 runtime evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass-23-runtime-deployment-certification-evidence
+          path: certification-output/pass-23-runtime-deployment
+
+# docker runtime required for PASS 23

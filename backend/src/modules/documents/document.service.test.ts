@@ -1,0 +1,3 @@
+import { describe, expect, it } from 'vitest';
+import { CompleteUploadSchema, UploadIntentSchema } from '@nexora/shared';
+describe('Document contracts',()=>{it('validates upload intent',()=>{expect(UploadIntentSchema.parse({subjectType:'Customer',fileName:'contract.pdf',mimeType:'application/pdf',sizeBytes:1000,category:'CONTRACT'}).category).toBe('CONTRACT');});it('validates complete upload evidence',()=>{expect(CompleteUploadSchema.parse({subjectType:'Customer',title:'Contract',category:'CONTRACT',fileName:'contract.pdf',mimeType:'application/pdf',sizeBytes:1000,checksumSha256:'a'.repeat(64),objectKey:'org/doc.pdf'}).checksumSha256).toHaveLength(64);});});

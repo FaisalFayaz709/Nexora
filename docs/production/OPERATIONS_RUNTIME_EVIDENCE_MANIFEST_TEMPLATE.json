@@ -1,0 +1,61 @@
+{
+  "pass": "PASS_24_OPERATIONS_OBSERVABILITY_BACKUP_DR",
+  "status": "HOLD_OPERATIONS_RUNTIME_EVIDENCE_REQUIRED",
+  "generatedAt": null,
+  "lockfilePresent": false,
+  "frozenInstallPassed": false,
+  "dockerRuntimePassed": false,
+  "performance": {
+    "apiP95Ms": null,
+    "apiErrorRatePct": null,
+    "dbQueryP95Ms": null,
+    "frontendLcpMs": null,
+    "reportExportP95Ms": null,
+    "concurrentUsers": null,
+    "failedRequestCount": null,
+    "queryPlanEvidenceFiles": []
+  },
+  "backupRestore": {
+    "backupEncrypted": false,
+    "backupRetentionDays": null,
+    "postgresBackupChecksum": null,
+    "minioObjectManifestChecksum": null,
+    "redisRecoveryPlanAttached": false,
+    "rpoMinutes": null,
+    "rtoMinutes": null,
+    "restoreDrillPassed": false,
+    "restoredDatabaseValidated": false,
+    "restoredObjectSampleValidated": false,
+    "crossTenantSampleDenied": false
+  },
+  "observability": {
+    "requestIdTraceAttached": false,
+    "correlationIdTraceAttached": false,
+    "structuredLogsEnabled": false,
+    "metricsEndpointReachable": false,
+    "tracingEnabled": false,
+    "healthEndpointReachable": false,
+    "readinessEndpointReachable": false,
+    "logRedactionVerified": false,
+    "auditSampleAttached": false,
+    "alertRulesConfigured": false,
+    "oncallRunbookAttached": false,
+    "productionLogRetentionDays": null
+  },
+  "queueBackpressure": {
+    "queueLagSeconds": null,
+    "stalledJobs": null,
+    "deadLetterQueueEnabled": false,
+    "retryPolicyDocumented": false,
+    "poisonJobIsolated": false,
+    "criticalMutationPayloadsRejected": false
+  },
+  "incidentDr": {
+    "incidentResponseRunbookAttached": false,
+    "disasterRecoveryRunbookAttached": false,
+    "rollbackPlanAttached": false,
+    "rollbackDrillPassed": false,
+    "openCriticalIncidents": null,
+    "ownerApprovalRecorded": false
+  }
+}
